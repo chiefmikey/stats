@@ -1,0 +1,31 @@
+{
+  "name": "stats",
+  "version": "1.0.0",
+  "description": "Package downloads",
+  "devDependencies": {
+    "@mikey-pro/style-guide": "^4.9.11",
+    "eslint": "^8.10.0",
+    "prettier": "^2.5.1",
+    "stylelint": "^14.5.3"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://chiefmikey@github.com/chiefmikey/stats.git"
+  },
+  "homepage": "https://github.com/chiefmikey/stats#readme",
+  "author": "Mikl Wolfe <wolfe@mikl.io> (https://mikl.io)",
+  "bugs": {
+    "url": "https://github.com/chiefmikey/stats/issues"
+  },
+  "contributors": [
+    "Mikl Wolfe <wolfe@mikl.io> (https://mikl.io)"
+  ],
+  "prettier": "@mikey-pro/prettier-config",
+  "eslintConfig": {
+    "extends": "@mikey-pro/eslint-config"
+  },
+  "stylelint": {
+    "extends": "@mikey-pro/stylelint-config"
+  }
+}
