@@ -4,7 +4,7 @@
   "description": "Package downloads",
   "devDependencies": {
     "@mikey-pro/style-guide": "^4.146.0",
-    "eslint": "^8.36.0",
+    "eslint": "^8.37.0",
     "prettier": "^2.8.7",
     "stylelint": "^15.3.0"
   },
