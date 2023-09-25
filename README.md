@@ -19,7 +19,7 @@
       <td valign="center" align="center">
         <a href="https://www.npmjs.com/package/@mikey-pro/style-guide">
           <img
-            src="https://img.shields.io/npm/dw/@mikey-pro/style-guide?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge&label="
+            src="https://img.shields.io/npm/dw/mikey-pro?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge&label="
             alt="Mikey Pro Style Guide npm package total downloads count"
             style="width: 100%; height: 100%"
           />
@@ -28,7 +28,7 @@
       <td valign="center" align="center">
         <a href="https://www.npmjs.com/package/@mikey-pro/style-guide">
           <img
-            src="https://img.shields.io/npm/dm/@mikey-pro/style-guide?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge&label="
+            src="https://img.shields.io/npm/dm/mikey-pro?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge&label="
             alt="Mikey Pro Style Guide npm package total downloads count"
             style="width: 100%; height: 100%"
           />
@@ -37,7 +37,7 @@
       <td valign="center" align="center">
         <a href="https://www.npmjs.com/package/@mikey-pro/style-guide">
           <img
-            src="https://img.shields.io/npm/dy/@mikey-pro/style-guide?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge&label="
+            src="https://img.shields.io/npm/dy/mikey-pro?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge&label="
             alt="Mikey Pro Style Guide npm package total downloads count"
             style="width: 100%; height: 100%"
           />
@@ -46,7 +46,7 @@
       <td valign="center" align="center">
         <a href="https://www.npmjs.com/package/@mikey-pro/style-guide">
           <img
-            src="https://img.shields.io/npm/dt/@mikey-pro/style-guide?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge&label="
+            src="https://img.shields.io/npm/dt/mikey-pro?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge&label="
             alt="Mikey Pro Style Guide npm package total downloads count"
             style="width: 100%; height: 100%"
           />
