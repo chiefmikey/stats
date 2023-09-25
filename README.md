@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<h1 align="center">Downloads</h1>
+<h1 align="center">Stats</h1>
 <br />
 <table align="center">
   <thead>
