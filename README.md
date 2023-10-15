@@ -200,9 +200,7 @@
       <td style="text-align: center; vertical-align: middle">
         <a href="https://www.npmjs.com/package/@mikey-pro/style-guide">
           <img
-            src="https://img.shields.io/
-chrome-web-store/stars/najhldfogkjhgdaaloddlfdgjfolnoik
-?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge"
+            src="https://img.shields.io/chrome-web-store/stars/najhldfogkjhgdaaloddlfdgjfolnoik?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge"
             alt="Mikey Pro Style Guide npm package total downloads count"
             style="width: 100%; height: 100%"
           />
