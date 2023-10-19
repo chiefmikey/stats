@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Stats",
   "devDependencies": {
-    "mikey-pro": "^6.5.11"
+    "mikey-pro": "^6.6.6"
   },
   "license": "MIT",
   "repository": {
