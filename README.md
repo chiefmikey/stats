@@ -21,7 +21,7 @@
             src="https://img.shields.io/npm/dw/mikey-pro?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge&label="
             alt="weekly downloads"
             width="100px"
-            height="35px"
+            height="30px"
           />
         </a>
       </td>
@@ -31,7 +31,7 @@
             src="https://img.shields.io/npm/dm/mikey-pro?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge&label="
             alt="monthly downloads"
             width="100px"
-            height="35px"
+            height="30px"
           />
         </a>
       </td>
@@ -41,7 +41,7 @@
             src="https://img.shields.io/npm/dy/mikey-pro?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge&label="
             alt="yearly downloads"
             width="100px"
-            height="35px"
+            height="30px"
           />
         </a>
       </td>
@@ -51,7 +51,7 @@
             src="https://img.shields.io/npm/dt/mikey-pro?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge&label="
             alt="total downloads"
             width="100px"
-            height="55px"
+            height="50px"
           />
         </a>
       </td>
@@ -72,7 +72,7 @@
             src="https://img.shields.io/npm/dw/eslint-plugin-disable-autofix?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge&label="
             alt="weekly downloads"
             width="100px"
-            height="35px"
+            height="30px"
           />
         </a>
       </td>
@@ -85,7 +85,7 @@
             src="https://img.shields.io/npm/dm/eslint-plugin-disable-autofix?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge&label="
             alt="monthly downloads"
             width="100px"
-            height="35px"
+            height="30px"
           />
         </a>
       </td>
@@ -98,7 +98,7 @@
             src="https://img.shields.io/npm/dy/eslint-plugin-disable-autofix?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge&label="
             alt="yearly downloads"
             width="100px"
-            height="35px"
+            height="30px"
           />
         </a>
       </td>
@@ -111,7 +111,7 @@
             src="https://img.shields.io/npm/dt/eslint-plugin-disable-autofix?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge&label="
             alt="total downloads"
             width="100px"
-            height="55px"
+            height="50px"
           />
         </a>
       </td>
@@ -132,7 +132,7 @@
             src="https://img.shields.io/npm/dw/eslint-config-react-app-bump?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge&label="
             alt="weekly downloads"
             width="100px"
-            height="35px"
+            height="30px"
           />
         </a>
       </td>
@@ -145,7 +145,7 @@
             src="https://img.shields.io/npm/dm/eslint-config-react-app-bump?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge&label="
             alt="monthly downloads"
             width="100px"
-            height="35px"
+            height="30px"
           />
         </a>
       </td>
@@ -158,7 +158,7 @@
             src="https://img.shields.io/npm/dy/eslint-config-react-app-bump?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge&label="
             alt="yearly downloads"
             width="100px"
-            height="35px"
+            height="30px"
           />
         </a>
       </td>
@@ -171,7 +171,7 @@
             src="https://img.shields.io/npm/dt/eslint-config-react-app-bump?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge&label="
             alt="total downloads"
             width="100px"
-            height="55px"
+            height="50px"
           />
         </a>
       </td>
@@ -197,7 +197,7 @@
             src="https://img.shields.io/chrome-web-store/rating-count/najhldfogkjhgdaaloddlfdgjfolnoik?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge"
             alt="rating count"
             width="100px"
-            height="35px"
+            height="30px"
           />
         </a>
       </td>
@@ -207,7 +207,7 @@
             src="https://img.shields.io/chrome-web-store/rating/najhldfogkjhgdaaloddlfdgjfolnoik?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge"
             alt="rating"
             width="100px"
-            height="35px"
+            height="30px"
           />
         </a>
       </td>
@@ -217,7 +217,7 @@
             src="https://img.shields.io/chrome-web-store/stars/najhldfogkjhgdaaloddlfdgjfolnoik?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge"
             alt="stars"
             width="100px"
-            height="35px"
+            height="30px"
           />
         </a>
       </td>
@@ -227,7 +227,7 @@
             src="https://img.shields.io/chrome-web-store/users/najhldfogkjhgdaaloddlfdgjfolnoik?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge"
             alt="users"
             width="100px"
-            height="35px"
+            height="30px"
           />
         </a>
       </td>
