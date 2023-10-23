@@ -214,9 +214,7 @@
       <td align="center" text-align="center">
         <a href="https://www.npmjs.com/package/@mikey-pro/style-guide">
           <img
-            src="https://img.shields.io/
-chrome-web-store/stars/najhldfogkjhgdaaloddlfdgjfolnoik
-?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge"
+            src="https://img.shields.io/chrome-web-store/stars/najhldfogkjhgdaaloddlfdgjfolnoik?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge"
             alt="stars"
             width="100px"
             height="25px"
