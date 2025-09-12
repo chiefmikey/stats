@@ -298,22 +298,27 @@ class StatsCollector {
 
         .stats-row {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-            gap: 10px;
-            margin-top: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
         }
 
         .stat-badge {
             text-align: center;
-            padding: 15px 12px;
+            padding: 20px 16px;
             background: white;
             border-radius: 8px;
             border: 1px solid #dee2e6;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .stat-badge img {
             max-width: 100%;
-            height: 40px;
+            height: 60px;
+            width: auto;
         }
 
         .chrome-stats {
