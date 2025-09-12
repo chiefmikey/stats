@@ -2,7 +2,8 @@
 
 > **Live Statistics** • **Automated Updates** • **Professional Tracking**
 
-A comprehensive dashboard for tracking download statistics and usage metrics across my NPM packages and Chrome Web Store extensions.
+A comprehensive dashboard for tracking download statistics and usage metrics
+across my NPM packages and Chrome Web Store extensions.
 
 [![Live Dashboard](https://img.shields.io/badge/🌐_Live_Dashboard-View_Now-blue?style=for-the-badge&logo=github)](https://chiefmikey.github.io/stats/)
 [![Last Updated](https://img.shields.io/badge/last%20updated-9%2F12%2F2025-blue?style=for-the-badge)](https://github.com/chiefmikey/stats/actions)
@@ -19,7 +20,8 @@ A comprehensive dashboard for tracking download statistics and usage metrics acr
 <td width="25%">
 
 #### [Mikey Pro Style Guide](https://github.com/mikey-pro/style-guide)
-*Comprehensive style guide and configuration packages*
+
+_Comprehensive style guide and configuration packages_
 
 [![Weekly](https://img.shields.io/npm/dw/mikey-pro?style=for-the-badge&label=)](https://www.npmjs.com/package/mikey-pro)
 [![Monthly](https://img.shields.io/npm/dm/mikey-pro?style=for-the-badge&label=)](https://www.npmjs.com/package/mikey-pro)
@@ -30,7 +32,8 @@ A comprehensive dashboard for tracking download statistics and usage metrics acr
 <td width="25%">
 
 #### [ESLint Plugin Disable Autofix](https://github.com/chiefmikey/eslint-plugin-disable-autofix)
-*ESLint plugin to disable autofix for specific rules*
+
+_ESLint plugin to disable autofix for specific rules_
 
 [![Weekly](https://img.shields.io/npm/dw/eslint-plugin-disable-autofix?style=for-the-badge&label=)](https://www.npmjs.com/package/eslint-plugin-disable-autofix)
 [![Monthly](https://img.shields.io/npm/dm/eslint-plugin-disable-autofix?style=for-the-badge&label=)](https://www.npmjs.com/package/eslint-plugin-disable-autofix)
@@ -41,7 +44,8 @@ A comprehensive dashboard for tracking download statistics and usage metrics acr
 <td width="25%">
 
 #### [ESLint Config React App Bump](https://github.com/chiefmikey/eslint-config-react-app-bump)
-*Updated ESLint configuration for React applications*
+
+_Updated ESLint configuration for React applications_
 
 [![Weekly](https://img.shields.io/npm/dw/eslint-config-react-app-bump?style=for-the-badge&label=)](https://www.npmjs.com/package/eslint-config-react-app-bump)
 [![Monthly](https://img.shields.io/npm/dm/eslint-config-react-app-bump?style=for-the-badge&label=)](https://www.npmjs.com/package/eslint-config-react-app-bump)
@@ -59,7 +63,8 @@ A comprehensive dashboard for tracking download statistics and usage metrics acr
 <td width="50%">
 
 #### [Tomorrow Night Darkly Theme](https://chrome.google.com/webstore/detail/tomorrow-night-darkly/najhldfogkjhgdaaloddlfdgjfolnoik)
-*Dark theme for Chrome with Tomorrow Night color scheme*
+
+_Dark theme for Chrome with Tomorrow Night color scheme_
 
 [![Rating Count](https://img.shields.io/chrome-web-store/rating-count/najhldfogkjhgdaaloddlfdgjfolnoik?style=for-the-badge)](https://chrome.google.com/webstore/detail/tomorrow-night-darkly/najhldfogkjhgdaaloddlfdgjfolnoik)
 [![Rating](https://img.shields.io/chrome-web-store/rating/najhldfogkjhgdaaloddlfdgjfolnoik?style=for-the-badge)](https://chrome.google.com/webstore/detail/tomorrow-night-darkly/najhldfogkjhgdaaloddlfdgjfolnoik)
@@ -72,21 +77,22 @@ A comprehensive dashboard for tracking download statistics and usage metrics acr
 
 ## ✨ Features
 
-| Feature | Description |
-|---------|-------------|
-| 🔄 **Automated Updates** | Stats refresh every 6 hours via GitHub Actions |
-| 📊 **Real-time Data** | Live metrics from NPM and Chrome Web Store APIs |
-| 🎨 **Beautiful Dashboard** | Modern, responsive HTML interface |
-| 📈 **Historical Tracking** | Data stored and tracked over time |
-| ⚙️ **Easy Management** | Simple JSON configuration for packages |
-| 🌐 **GitHub Pages** | Automatic deployment to live website |
-| 📱 **Mobile Responsive** | Works perfectly on all devices |
-| 🔗 **API Endpoints** | JSON API for programmatic access |
+| Feature                    | Description                                     |
+| -------------------------- | ----------------------------------------------- |
+| 🔄 **Automated Updates**   | Stats refresh every 6 hours via GitHub Actions  |
+| 📊 **Real-time Data**      | Live metrics from NPM and Chrome Web Store APIs |
+| 🎨 **Beautiful Dashboard** | Modern, responsive HTML interface               |
+| 📈 **Historical Tracking** | Data stored and tracked over time               |
+| ⚙️ **Easy Management**     | Simple JSON configuration for packages          |
+| 🌐 **GitHub Pages**        | Automatic deployment to live website            |
+| 📱 **Mobile Responsive**   | Works perfectly on all devices                  |
+| 🔗 **API Endpoints**       | JSON API for programmatic access                |
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js 18+ 
+
+- Node.js 18+
 - npm or yarn
 
 ### Installation & Usage
@@ -111,12 +117,12 @@ npm run build
 
 ### Available Scripts
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server with auto-refresh |
-| `npm run update` | Manually update all package statistics |
-| `npm run build` | Build static files for deployment |
-| `npm start` | Start production server |
+| Command          | Description                                |
+| ---------------- | ------------------------------------------ |
+| `npm run dev`    | Start development server with auto-refresh |
+| `npm run update` | Manually update all package statistics     |
+| `npm run build`  | Build static files for deployment          |
+| `npm start`      | Start production server                    |
 
 ## ⚙️ Configuration
 
@@ -149,17 +155,18 @@ Edit `src/packages.json` to add or remove packages:
 
 ### Package Configuration Options
 
-| Field | Required | Description |
-|-------|----------|-------------|
-| `name` | ✅ | Display name for the package/extension |
-| `package`/`extensionId` | ✅ | NPM package name or Chrome extension ID |
-| `github` | ✅ | GitHub repository URL |
-| `npm`/`store` | ✅ | NPM or Chrome Web Store URL |
-| `description` | ✅ | Brief description for display |
+| Field                   | Required | Description                             |
+| ----------------------- | -------- | --------------------------------------- |
+| `name`                  | ✅       | Display name for the package/extension  |
+| `package`/`extensionId` | ✅       | NPM package name or Chrome extension ID |
+| `github`                | ✅       | GitHub repository URL                   |
+| `npm`/`store`           | ✅       | NPM or Chrome Web Store URL             |
+| `description`           | ✅       | Brief description for display           |
 
 ## 📊 Data & Analytics
 
 ### Data Storage
+
 - **Location**: `data/stats.json`
 - **Format**: JSON with timestamps
 - **Retention**: Historical data preserved indefinitely
@@ -167,12 +174,14 @@ Edit `src/packages.json` to add or remove packages:
 ### Metrics Tracked
 
 #### NPM Packages
+
 - Weekly downloads
-- Monthly downloads  
+- Monthly downloads
 - Yearly downloads
 - Total downloads (all-time)
 
 #### Chrome Extensions
+
 - Rating count
 - Average rating
 - Star rating
@@ -180,21 +189,24 @@ Edit `src/packages.json` to add or remove packages:
 
 ### API Endpoints
 
-| Endpoint | Description | Method |
-|----------|-------------|---------|
-| `/api.json` | Complete package and stats data | GET |
-| `/api/stats` | Historical stats data only | GET |
-| `/api/refresh` | Trigger stats refresh | POST |
+| Endpoint       | Description                     | Method |
+| -------------- | ------------------------------- | ------ |
+| `/api.json`    | Complete package and stats data | GET    |
+| `/api/stats`   | Historical stats data only      | GET    |
+| `/api/refresh` | Trigger stats refresh           | POST   |
 
 ## 🔄 Automation & Deployment
 
 ### GitHub Actions Workflow
-- **Schedule**: Every 6 hours (0 */6 * * *)
+
+- **Schedule**: Every 6 hours (0 _/6_ \*\*)
 - **Triggers**: Manual dispatch, package config changes
 - **Deployment**: Automatic GitHub Pages deployment
-- **Status**: [![GitHub Actions](https://img.shields.io/badge/automated-GitHub%20Actions-green?style=for-the-badge&logo=github-actions)](https://github.com/chiefmikey/stats/actions)
+- **Status**:
+  [![GitHub Actions](https://img.shields.io/badge/automated-GitHub%20Actions-green?style=for-the-badge&logo=github-actions)](https://github.com/chiefmikey/stats/actions)
 
 ### Deployment Process
+
 1. **Stats Collection**: Fetches latest data from APIs
 2. **Data Processing**: Updates historical records
 3. **Dashboard Generation**: Creates HTML and README
@@ -203,6 +215,7 @@ Edit `src/packages.json` to add or remove packages:
 ## 🛠️ Development
 
 ### Project Structure
+
 ```
 stats/
 ├── src/
@@ -220,6 +233,7 @@ stats/
 ```
 
 ### Contributing
+
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
@@ -235,9 +249,12 @@ stats/
 
 ## 🔗 Links
 
-- **Live Dashboard**: [https://chiefmikey.github.io/stats/](https://chiefmikey.github.io/stats/)
-- **GitHub Repository**: [https://github.com/chiefmikey/stats](https://github.com/chiefmikey/stats)
-- **GitHub Actions**: [https://github.com/chiefmikey/stats/actions](https://github.com/chiefmikey/stats/actions)
+- **Live Dashboard**:
+  [https://chiefmikey.github.io/stats/](https://chiefmikey.github.io/stats/)
+- **GitHub Repository**:
+  [https://github.com/chiefmikey/stats](https://github.com/chiefmikey/stats)
+- **GitHub Actions**:
+  [https://github.com/chiefmikey/stats/actions](https://github.com/chiefmikey/stats/actions)
 
 ---
 
@@ -245,6 +262,6 @@ stats/
 
 **Built with ❤️ by [Mikl Wolfe](https://mikl.io)**
 
-*Last updated: 9/12/2025, 12:50:41 PM*
+_Last updated: 9/12/2025, 12:50:41 PM_
 
 </div>
