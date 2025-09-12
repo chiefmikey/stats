@@ -323,22 +323,45 @@ class StatsCollector {
         }
 
         .chrome-card {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            background: #2c3e50;
             color: white;
-            border-radius: 15px;
-            padding: 25px;
+            border-radius: 6px;
+            padding: 24px;
             text-align: center;
         }
 
         .chrome-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: white;
+            font-weight: 500;
+        }
+        
+        .chrome-card p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem;
+            margin-bottom: 16px;
         }
 
         .chrome-stats-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        
+        .chrome-card .stat-badge {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .chrome-card a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .chrome-card a:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
