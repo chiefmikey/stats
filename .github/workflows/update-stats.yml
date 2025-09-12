@@ -71,13 +71,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
-          exclude_assets: |
-            .github/
-            src/
-            data/
-            node_modules/
-            package*.json
-            README.md
 
       - name: Deploy to GitHub Pages
         id: deployment

@@ -105,3 +105,24 @@ Thumbs.db
 
 # Old files
 Readme.html
+
+# Stats data (keep for tracking but exclude from deployment)
+data/
+
+# Generated files that shouldn't be in version control
+api.json
+
+# IDE and editor files
+*.sublime-project
+*.sublime-workspace
+.vscode/settings.json
+.vscode/launch.json
+
+# macOS
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
