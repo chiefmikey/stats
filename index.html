@@ -3,7 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Package Statistics Dashboard</title>
+    <title>📊 Package Statistics Dashboard</title>
+    <meta name="description" content="Real-time download and usage statistics for npm packages and Chrome Web Store extensions">
+    <meta name="keywords" content="npm, packages, statistics, downloads, chrome extensions, dashboard">
+    <meta name="author" content="Mikl Wolfe">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chiefmikey.github.io/stats/">
+    <meta property="og:title" content="📊 Package Statistics Dashboard">
+    <meta property="og:description" content="Real-time download and usage statistics for npm packages and Chrome Web Store extensions">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://chiefmikey.github.io/stats/">
+    <meta property="twitter:title" content="📊 Package Statistics Dashboard">
+    <meta property="twitter:description" content="Real-time download and usage statistics for npm packages and Chrome Web Store extensions">
+    
     <style>
         * {
             margin: 0;
@@ -158,6 +174,21 @@
             gap: 15px;
         }
         
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #6c757d;
+        }
+        
+        .error {
+            text-align: center;
+            padding: 40px;
+            color: #dc3545;
+            background: #f8d7da;
+            border-radius: 10px;
+            margin: 20px;
+        }
+        
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 2rem;
@@ -178,109 +209,110 @@
         <div class="header">
             <h1>📊 Package Statistics</h1>
             <p>Real-time download and usage statistics for my packages</p>
-            <div class="last-updated">
-                Last updated: 9/12/2025, 9:50:40 AM
+            <div class="last-updated" id="lastUpdated">
+                Loading...
             </div>
         </div>
         
         <div class="section">
             <h2 class="section-title">📦 NPM Packages</h2>
-            <div class="stats-grid">
-                <div class="package-card">
-                    <div class="package-name">Mikey Pro Style Guide</div>
-                    <div class="package-description">Comprehensive style guide and configuration packages</div>
-                    <div class="package-links">
-                        <a href="https://github.com/mikey-pro/style-guide" target="_blank">GitHub</a>
-                        <a href="https://www.npmjs.com/package/mikey-pro" target="_blank">NPM</a>
-                    </div>
-                    <div class="stats-row">
-                        <div class="stat-badge">
-                            <img src="https://img.shields.io/npm/dw/mikey-pro?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Weekly downloads">
-                        </div>
-                        <div class="stat-badge">
-                            <img src="https://img.shields.io/npm/dm/mikey-pro?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Monthly downloads">
-                        </div>
-                        <div class="stat-badge">
-                            <img src="https://img.shields.io/npm/dy/mikey-pro?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Yearly downloads">
-                        </div>
-                        <div class="stat-badge">
-                            <img src="https://img.shields.io/npm/dt/mikey-pro?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Total downloads">
-                        </div>
-                    </div>
-                </div>
-                <div class="package-card">
-                    <div class="package-name">ESLint Plugin Disable Autofix</div>
-                    <div class="package-description">ESLint plugin to disable autofix for specific rules</div>
-                    <div class="package-links">
-                        <a href="https://github.com/chiefmikey/eslint-plugin-disable-autofix" target="_blank">GitHub</a>
-                        <a href="https://www.npmjs.com/package/eslint-plugin-disable-autofix" target="_blank">NPM</a>
-                    </div>
-                    <div class="stats-row">
-                        <div class="stat-badge">
-                            <img src="https://img.shields.io/npm/dw/eslint-plugin-disable-autofix?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Weekly downloads">
-                        </div>
-                        <div class="stat-badge">
-                            <img src="https://img.shields.io/npm/dm/eslint-plugin-disable-autofix?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Monthly downloads">
-                        </div>
-                        <div class="stat-badge">
-                            <img src="https://img.shields.io/npm/dy/eslint-plugin-disable-autofix?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Yearly downloads">
-                        </div>
-                        <div class="stat-badge">
-                            <img src="https://img.shields.io/npm/dt/eslint-plugin-disable-autofix?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Total downloads">
-                        </div>
-                    </div>
-                </div>
-                <div class="package-card">
-                    <div class="package-name">ESLint Config React App Bump</div>
-                    <div class="package-description">Updated ESLint configuration for React applications</div>
-                    <div class="package-links">
-                        <a href="https://github.com/chiefmikey/eslint-config-react-app-bump" target="_blank">GitHub</a>
-                        <a href="https://www.npmjs.com/package/eslint-config-react-app-bump" target="_blank">NPM</a>
-                    </div>
-                    <div class="stats-row">
-                        <div class="stat-badge">
-                            <img src="https://img.shields.io/npm/dw/eslint-config-react-app-bump?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Weekly downloads">
-                        </div>
-                        <div class="stat-badge">
-                            <img src="https://img.shields.io/npm/dm/eslint-config-react-app-bump?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Monthly downloads">
-                        </div>
-                        <div class="stat-badge">
-                            <img src="https://img.shields.io/npm/dy/eslint-config-react-app-bump?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Yearly downloads">
-                        </div>
-                        <div class="stat-badge">
-                            <img src="https://img.shields.io/npm/dt/eslint-config-react-app-bump?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Total downloads">
-                        </div>
-                    </div>
-                </div>
+            <div class="stats-grid" id="npmPackages">
+                <div class="loading">Loading package statistics...</div>
             </div>
         </div>
         
         <div class="section">
             <h2 class="section-title">🌐 Chrome Web Store</h2>
-            <div class="chrome-stats">
-                <div class="chrome-card">
-                    <h3>Tomorrow Night Darkly Theme</h3>
-                    <p style="margin-bottom: 20px; opacity: 0.9;">Dark theme for Chrome with Tomorrow Night color scheme</p>
-                    <div class="chrome-stats-grid">
-                        <div class="stat-badge" style="background: rgba(255,255,255,0.2);">
-                            <img src="https://img.shields.io/chrome-web-store/rating-count/najhldfogkjhgdaaloddlfdgjfolnoik?color=rgba(0,0,0,0)&style=for-the-badge" alt="Rating count">
-                        </div>
-                        <div class="stat-badge" style="background: rgba(255,255,255,0.2);">
-                            <img src="https://img.shields.io/chrome-web-store/rating/najhldfogkjhgdaaloddlfdgjfolnoik?color=rgba(0,0,0,0)&style=for-the-badge" alt="Rating">
-                        </div>
-                        <div class="stat-badge" style="background: rgba(255,255,255,0.2);">
-                            <img src="https://img.shields.io/chrome-web-store/stars/najhldfogkjhgdaaloddlfdgjfolnoik?color=rgba(0,0,0,0)&style=for-the-badge" alt="Stars">
-                        </div>
-                        <div class="stat-badge" style="background: rgba(255,255,255,0.2);">
-                            <img src="https://img.shields.io/chrome-web-store/users/najhldfogkjhgdaaloddlfdgjfolnoik?color=rgba(0,0,0,0)&style=for-the-badge" alt="Users">
-                        </div>
-                    </div>
-                    <div style="margin-top: 15px;">
-                        <a href="https://chrome.google.com/webstore/detail/tomorrow-night-darkly/najhldfogkjhgdaaloddlfdgjfolnoik" target="_blank" style="color: white; text-decoration: none; font-weight: 500;">View in Store</a>
-                    </div>
-                </div>
+            <div class="chrome-stats" id="chromeExtensions">
+                <div class="loading">Loading extension statistics...</div>
             </div>
         </div>
     </div>
+
+    <script>
+        // Load stats data
+        async function loadStats() {
+            try {
+                const response = await fetch('/api.json');
+                const data = await response.json();
+                
+                // Update last updated time
+                const lastUpdated = document.getElementById('lastUpdated');
+                lastUpdated.textContent = `Last updated: ${new Date(data.lastUpdated).toLocaleString()}`;
+                
+                // Render NPM packages
+                renderNpmPackages(data.packages.npm);
+                
+                // Render Chrome extensions
+                renderChromeExtensions(data.packages.chrome);
+                
+            } catch (error) {
+                console.error('Error loading stats:', error);
+                document.getElementById('npmPackages').innerHTML = '<div class="error">Failed to load package statistics</div>';
+                document.getElementById('chromeExtensions').innerHTML = '<div class="error">Failed to load extension statistics</div>';
+            }
+        }
+        
+        function renderNpmPackages(packages) {
+            const container = document.getElementById('npmPackages');
+            container.innerHTML = packages.map(pkg => `
+                <div class="package-card">
+                    <div class="package-name">${pkg.name}</div>
+                    <div class="package-description">${pkg.description}</div>
+                    <div class="package-links">
+                        <a href="${pkg.github}" target="_blank">GitHub</a>
+                        <a href="${pkg.npm}" target="_blank">NPM</a>
+                    </div>
+                    <div class="stats-row">
+                        <div class="stat-badge">
+                            <img src="https://img.shields.io/npm/dw/${pkg.package}?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge&label=" alt="Weekly downloads">
+                        </div>
+                        <div class="stat-badge">
+                            <img src="https://img.shields.io/npm/dm/${pkg.package}?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge&label=" alt="Monthly downloads">
+                        </div>
+                        <div class="stat-badge">
+                            <img src="https://img.shields.io/npm/dy/${pkg.package}?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge&label=" alt="Yearly downloads">
+                        </div>
+                        <div class="stat-badge">
+                            <img src="https://img.shields.io/npm/dt/${pkg.package}?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge&label=" alt="Total downloads">
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function renderChromeExtensions(extensions) {
+            const container = document.getElementById('chromeExtensions');
+            container.innerHTML = extensions.map(ext => `
+                <div class="chrome-card">
+                    <h3>${ext.name}</h3>
+                    <p style="margin-bottom: 20px; opacity: 0.9;">${ext.description}</p>
+                    <div class="chrome-stats-grid">
+                        <div class="stat-badge" style="background: rgba(255,255,255,0.2);">
+                            <img src="https://img.shields.io/chrome-web-store/rating-count/${ext.extensionId}?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge" alt="Rating count">
+                        </div>
+                        <div class="stat-badge" style="background: rgba(255,255,255,0.2);">
+                            <img src="https://img.shields.io/chrome-web-store/rating/${ext.extensionId}?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge" alt="Rating">
+                        </div>
+                        <div class="stat-badge" style="background: rgba(255,255,255,0.2);">
+                            <img src="https://img.shields.io/chrome-web-store/stars/${ext.extensionId}?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge" alt="Stars">
+                        </div>
+                        <div class="stat-badge" style="background: rgba(255,255,255,0.2);">
+                            <img src="https://img.shields.io/chrome-web-store/users/${ext.extensionId}?color=rgba%280%2C0%2C0%2C0%29&style=for-the-badge" alt="Users">
+                        </div>
+                    </div>
+                    <div style="margin-top: 15px;">
+                        <a href="${ext.store}" target="_blank" style="color: white; text-decoration: none; font-weight: 500;">View in Store</a>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        // Load stats when page loads
+        document.addEventListener('DOMContentLoaded', loadStats);
+        
+        // Auto-refresh every 5 minutes
+        setInterval(loadStats, 5 * 60 * 1000);
+    </script>
 </body>
 </html>
