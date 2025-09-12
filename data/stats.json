@@ -20,7 +20,7 @@
       "github": "https://github.com/chiefmikey/eslint-plugin-disable-autofix",
       "npm": "https://www.npmjs.com/package/eslint-plugin-disable-autofix",
       "description": "ESLint plugin to disable autofix for specific rules",
-      "lastFetched": "2025-09-12T19:00:36.391Z"
+      "lastFetched": "2025-09-12T19:30:36.426Z"
     },
     "eslint-config-react-app-bump": {
       "weekly": 1410,
@@ -31,7 +31,7 @@
       "github": "https://github.com/chiefmikey/eslint-config-react-app-bump",
       "npm": "https://www.npmjs.com/package/eslint-config-react-app-bump",
       "description": "Updated ESLint configuration for React applications",
-      "lastFetched": "2025-09-12T19:00:37.715Z"
+      "lastFetched": "2025-09-12T19:30:37.734Z"
     },
     "mikey-pro": {
       "weekly": 104,
@@ -42,7 +42,7 @@
       "github": "https://github.com/mikey-pro/style-guide",
       "npm": "https://www.npmjs.com/package/mikey-pro",
       "description": "Comprehensive style guide and configuration packages",
-      "lastFetched": "2025-09-12T19:00:35.097Z"
+      "lastFetched": "2025-09-12T19:30:35.151Z"
     }
   },
   "chrome": {
@@ -54,8 +54,8 @@
       "github": "https://github.com/mikey-pro/style-guide",
       "store": "https://chrome.google.com/webstore/detail/tomorrow-night-darkly/najhldfogkjhgdaaloddlfdgjfolnoik",
       "description": "Dark theme for Chrome with Tomorrow Night color scheme",
-      "lastFetched": "2025-09-12T19:00:39.182Z"
+      "lastFetched": "2025-09-12T19:30:39.173Z"
     }
   },
-  "lastUpdated": "2025-09-12T19:00:40.186Z"
+  "lastUpdated": "2025-09-12T19:30:40.173Z"
 }

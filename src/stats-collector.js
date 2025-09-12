@@ -305,7 +305,7 @@ class StatsCollector {
 
         .stat-badge {
             text-align: center;
-            padding: 10px;
+            padding: 15px 12px;
             background: white;
             border-radius: 8px;
             border: 1px solid #dee2e6;
@@ -313,7 +313,7 @@ class StatsCollector {
 
         .stat-badge img {
             max-width: 100%;
-            height: auto;
+            height: 40px;
         }
 
         .chrome-stats {
@@ -336,7 +336,7 @@ class StatsCollector {
             color: white;
             font-weight: 500;
         }
-        
+
         .chrome-card p {
             color: rgba(255, 255, 255, 0.9);
             font-size: 0.9rem;
@@ -349,17 +349,17 @@ class StatsCollector {
             gap: 8px;
             margin-bottom: 16px;
         }
-        
+
         .chrome-card .stat-badge {
             background: rgba(255, 255, 255, 0.1);
         }
-        
+
         .chrome-card a {
             color: #007bff;
             text-decoration: none;
             font-size: 0.9rem;
         }
-        
+
         .chrome-card a:hover {
             text-decoration: underline;
         }
