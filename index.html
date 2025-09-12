@@ -1,286 +1,476 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Package Statistics Dashboard</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Package Statistics</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: #f8f9fa;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .header h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 8px;
+      }
+
+      .header p {
+        color: #6c757d;
+        font-size: 1.1rem;
+      }
+
+      .last-updated {
+        margin-top: 16px;
+        font-size: 0.9rem;
+        color: #6c757d;
+      }
+
+      .section {
+        margin-bottom: 50px;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 20px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #e9ecef;
+      }
+
+      .stats-table {
+        width: 100%;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e9ecef;
+      }
+
+      .stats-table th {
+        background: #f8f9fa;
+        padding: 16px 20px;
+        text-align: left;
+        font-weight: 600;
+        color: #495057;
+        border-bottom: 1px solid #e9ecef;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .stats-table td {
+        padding: 20px;
+        border-bottom: 1px solid #f1f3f4;
+        vertical-align: top;
+      }
+
+      .stats-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .package-name {
+        font-weight: 600;
+        color: #2c3e50;
+        font-size: 1.1rem;
+        margin-bottom: 4px;
+      }
+
+      .package-description {
+        color: #6c757d;
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+      }
+
+      .package-links {
+        margin-bottom: 16px;
+      }
+
+      .package-links a {
+        color: #007bff;
+        text-decoration: none;
+        font-size: 0.9rem;
+        margin-right: 16px;
+        font-weight: 500;
+      }
+
+      .package-links a:hover {
+        text-decoration: underline;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 12px;
+      }
+
+      .stat-item {
+        text-align: center;
+        padding: 12px 8px;
+        background: #f8f9fa;
+        border-radius: 6px;
+        border: 1px solid #e9ecef;
+      }
+
+      .stat-label {
+        font-size: 0.8rem;
+        color: #6c757d;
+        margin-bottom: 4px;
+        font-weight: 500;
+      }
+
+      .stat-value {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #2c3e50;
+      }
+
+      .chrome-table {
+        width: 100%;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e9ecef;
+      }
+
+      .chrome-table th {
+        background: #f8f9fa;
+        padding: 16px 20px;
+        text-align: left;
+        font-weight: 600;
+        color: #495057;
+        border-bottom: 1px solid #e9ecef;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .chrome-table td {
+        padding: 20px;
+        border-bottom: 1px solid #f1f3f4;
+        vertical-align: top;
+      }
+
+      .chrome-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .extension-name {
+        font-weight: 600;
+        color: #2c3e50;
+        font-size: 1.1rem;
+        margin-bottom: 4px;
+      }
+
+      .extension-description {
+        color: #6c757d;
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+      }
+
+      .extension-link {
+        color: #007bff;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+
+      .extension-link:hover {
+        text-decoration: underline;
+      }
+
+      .chrome-stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 12px;
+      }
+
+      .chrome-stat-item {
+        text-align: center;
+        padding: 12px 8px;
+        background: #f8f9fa;
+        border-radius: 6px;
+        border: 1px solid #e9ecef;
+      }
+
+      .chrome-stat-label {
+        font-size: 0.8rem;
+        color: #6c757d;
+        margin-bottom: 4px;
+        font-weight: 500;
+      }
+
+      .chrome-stat-value {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #2c3e50;
+      }
+
+      @media (max-width: 768px) {
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            overflow: hidden;
+          padding: 20px 16px;
         }
-        
-        .header {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-            color: white;
-            padding: 40px;
-            text-align: center;
-        }
-        
+
         .header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            font-weight: 700;
+          font-size: 2rem;
         }
-        
-        .header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
+
+        .stats-table th,
+        .chrome-table th {
+          padding: 12px 16px;
+          font-size: 0.8rem;
         }
-        
-        .last-updated {
-            background: rgba(255,255,255,0.1);
-            padding: 10px 20px;
-            border-radius: 25px;
-            display: inline-block;
-            margin-top: 20px;
-            font-size: 0.9rem;
+
+        .stats-table td,
+        .chrome-table td {
+          padding: 16px;
         }
-        
-        .section {
-            padding: 40px;
-        }
-        
-        .section-title {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
-        }
-        
-        .stats-grid {
-            display: grid;
-            gap: 20px;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        }
-        
-        .package-card {
-            background: #f8f9fa;
-            border-radius: 15px;
-            padding: 25px;
-            border: 1px solid #e9ecef;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .package-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        
-        .package-name {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
-        
-        .package-description {
-            color: #6c757d;
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-        
-        .package-links {
-            margin-bottom: 20px;
-        }
-        
-        .package-links a {
-            color: #3498db;
-            text-decoration: none;
-            margin-right: 15px;
-            font-weight: 500;
-        }
-        
-        .package-links a:hover {
-            text-decoration: underline;
-        }
-        
-        .stats-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-            gap: 10px;
-            margin-top: 15px;
-        }
-        
-        .stat-badge {
-            text-align: center;
-            padding: 10px;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #dee2e6;
-        }
-        
-        .stat-badge img {
-            max-width: 100%;
-            height: auto;
-        }
-        
-        .chrome-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        
-        .chrome-card {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-            color: white;
-            border-radius: 15px;
-            padding: 25px;
-            text-align: center;
-        }
-        
-        .chrome-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-        }
-        
+
+        .stats-grid,
         .chrome-stats-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 8px;
         }
-        
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2rem;
-            }
-            
-            .section {
-                padding: 20px;
-            }
-            
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
+
+        .stat-item,
+        .chrome-stat-item {
+          padding: 8px 6px;
         }
+
+        .stat-value,
+        .chrome-stat-value {
+          font-size: 1rem;
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="header">
-            <h1>📊 Package Statistics</h1>
-            <p>Real-time download and usage statistics for my packages</p>
-            <div class="last-updated">
-                Last updated: 9/12/2025, 1:35:40 PM
-            </div>
-        </div>
-        
-        <div class="section">
-            <h2 class="section-title">📦 NPM Packages</h2>
-            <div class="stats-grid">
-                <div class="package-card">
-                    <div class="package-name">Mikey Pro Style Guide</div>
-                    <div class="package-description">Comprehensive style guide and configuration packages</div>
-                    <div class="package-links">
-                        <a href="https://github.com/mikey-pro/style-guide" target="_blank">GitHub</a>
-                        <a href="https://www.npmjs.com/package/mikey-pro" target="_blank">NPM</a>
-                    </div>
-                    <div class="stats-row">
-                        <div class="stat-badge">
-                            <img src="https://img.shields.io/npm/dw/mikey-pro?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Weekly downloads">
-                        </div>
-                        <div class="stat-badge">
-                            <img src="https://img.shields.io/npm/dm/mikey-pro?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Monthly downloads">
-                        </div>
-                        <div class="stat-badge">
-                            <img src="https://img.shields.io/npm/dy/mikey-pro?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Yearly downloads">
-                        </div>
-                        <div class="stat-badge">
-                            <img src="https://img.shields.io/npm/dt/mikey-pro?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Total downloads">
-                        </div>
-                    </div>
+      <div class="header">
+        <h1>Package Statistics</h1>
+        <p>Download and usage statistics for my packages</p>
+        <div class="last-updated">Last updated: 9/12/2025, 1:35:40 PM</div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">NPM Packages</h2>
+        <table class="stats-table">
+          <thead>
+            <tr>
+              <th>Package</th>
+              <th>Description</th>
+              <th>Links</th>
+              <th>Statistics</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="package-name">Mikey Pro Style Guide</div>
+              </td>
+              <td>
+                <div class="package-description">Comprehensive style guide and configuration packages</div>
+              </td>
+              <td>
+                <div class="package-links">
+                  <a href="https://github.com/mikey-pro/style-guide" target="_blank">GitHub</a>
+                  <a href="https://www.npmjs.com/package/mikey-pro" target="_blank">NPM</a>
                 </div>
-                <div class="package-card">
-                    <div class="package-name">ESLint Plugin Disable Autofix</div>
-                    <div class="package-description">ESLint plugin to disable autofix for specific rules</div>
-                    <div class="package-links">
-                        <a href="https://github.com/chiefmikey/eslint-plugin-disable-autofix" target="_blank">GitHub</a>
-                        <a href="https://www.npmjs.com/package/eslint-plugin-disable-autofix" target="_blank">NPM</a>
+              </td>
+              <td>
+                <div class="stats-grid">
+                  <div class="stat-item">
+                    <div class="stat-label">Weekly</div>
+                    <div class="stat-value">
+                      <img src="https://img.shields.io/npm/dw/mikey-pro?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Weekly downloads" style="height: 20px;">
                     </div>
-                    <div class="stats-row">
-                        <div class="stat-badge">
-                            <img src="https://img.shields.io/npm/dw/eslint-plugin-disable-autofix?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Weekly downloads">
-                        </div>
-                        <div class="stat-badge">
-                            <img src="https://img.shields.io/npm/dm/eslint-plugin-disable-autofix?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Monthly downloads">
-                        </div>
-                        <div class="stat-badge">
-                            <img src="https://img.shields.io/npm/dy/eslint-plugin-disable-autofix?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Yearly downloads">
-                        </div>
-                        <div class="stat-badge">
-                            <img src="https://img.shields.io/npm/dt/eslint-plugin-disable-autofix?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Total downloads">
-                        </div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-label">Monthly</div>
+                    <div class="stat-value">
+                      <img src="https://img.shields.io/npm/dm/mikey-pro?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Monthly downloads" style="height: 20px;">
                     </div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-label">Yearly</div>
+                    <div class="stat-value">
+                      <img src="https://img.shields.io/npm/dy/mikey-pro?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Yearly downloads" style="height: 20px;">
+                    </div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-label">Total</div>
+                    <div class="stat-value">
+                      <img src="https://img.shields.io/npm/dt/mikey-pro?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Total downloads" style="height: 20px;">
+                    </div>
+                  </div>
                 </div>
-                <div class="package-card">
-                    <div class="package-name">ESLint Config React App Bump</div>
-                    <div class="package-description">Updated ESLint configuration for React applications</div>
-                    <div class="package-links">
-                        <a href="https://github.com/chiefmikey/eslint-config-react-app-bump" target="_blank">GitHub</a>
-                        <a href="https://www.npmjs.com/package/eslint-config-react-app-bump" target="_blank">NPM</a>
-                    </div>
-                    <div class="stats-row">
-                        <div class="stat-badge">
-                            <img src="https://img.shields.io/npm/dw/eslint-config-react-app-bump?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Weekly downloads">
-                        </div>
-                        <div class="stat-badge">
-                            <img src="https://img.shields.io/npm/dm/eslint-config-react-app-bump?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Monthly downloads">
-                        </div>
-                        <div class="stat-badge">
-                            <img src="https://img.shields.io/npm/dy/eslint-config-react-app-bump?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Yearly downloads">
-                        </div>
-                        <div class="stat-badge">
-                            <img src="https://img.shields.io/npm/dt/eslint-config-react-app-bump?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Total downloads">
-                        </div>
-                    </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="package-name">ESLint Plugin Disable Autofix</div>
+              </td>
+              <td>
+                <div class="package-description">ESLint plugin to disable autofix for specific rules</div>
+              </td>
+              <td>
+                <div class="package-links">
+                  <a href="https://github.com/chiefmikey/eslint-plugin-disable-autofix" target="_blank">GitHub</a>
+                  <a href="https://www.npmjs.com/package/eslint-plugin-disable-autofix" target="_blank">NPM</a>
                 </div>
-            </div>
-        </div>
-        
-        <div class="section">
-            <h2 class="section-title">🌐 Chrome Web Store</h2>
-            <div class="chrome-stats">
-                <div class="chrome-card">
-                    <h3>Tomorrow Night Darkly Theme</h3>
-                    <p style="margin-bottom: 20px; opacity: 0.9;">Dark theme for Chrome with Tomorrow Night color scheme</p>
-                    <div class="chrome-stats-grid">
-                        <div class="stat-badge" style="background: rgba(255,255,255,0.2);">
-                            <img src="https://img.shields.io/chrome-web-store/rating-count/najhldfogkjhgdaaloddlfdgjfolnoik?color=rgba(0,0,0,0)&style=for-the-badge" alt="Rating count">
-                        </div>
-                        <div class="stat-badge" style="background: rgba(255,255,255,0.2);">
-                            <img src="https://img.shields.io/chrome-web-store/rating/najhldfogkjhgdaaloddlfdgjfolnoik?color=rgba(0,0,0,0)&style=for-the-badge" alt="Rating">
-                        </div>
-                        <div class="stat-badge" style="background: rgba(255,255,255,0.2);">
-                            <img src="https://img.shields.io/chrome-web-store/stars/najhldfogkjhgdaaloddlfdgjfolnoik?color=rgba(0,0,0,0)&style=for-the-badge" alt="Stars">
-                        </div>
-                        <div class="stat-badge" style="background: rgba(255,255,255,0.2);">
-                            <img src="https://img.shields.io/chrome-web-store/users/najhldfogkjhgdaaloddlfdgjfolnoik?color=rgba(0,0,0,0)&style=for-the-badge" alt="Users">
-                        </div>
+              </td>
+              <td>
+                <div class="stats-grid">
+                  <div class="stat-item">
+                    <div class="stat-label">Weekly</div>
+                    <div class="stat-value">
+                      <img src="https://img.shields.io/npm/dw/eslint-plugin-disable-autofix?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Weekly downloads" style="height: 20px;">
                     </div>
-                    <div style="margin-top: 15px;">
-                        <a href="https://chrome.google.com/webstore/detail/tomorrow-night-darkly/najhldfogkjhgdaaloddlfdgjfolnoik" target="_blank" style="color: white; text-decoration: none; font-weight: 500;">View in Store</a>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-label">Monthly</div>
+                    <div class="stat-value">
+                      <img src="https://img.shields.io/npm/dm/eslint-plugin-disable-autofix?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Monthly downloads" style="height: 20px;">
                     </div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-label">Yearly</div>
+                    <div class="stat-value">
+                      <img src="https://img.shields.io/npm/dy/eslint-plugin-disable-autofix?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Yearly downloads" style="height: 20px;">
+                    </div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-label">Total</div>
+                    <div class="stat-value">
+                      <img src="https://img.shields.io/npm/dt/eslint-plugin-disable-autofix?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Total downloads" style="height: 20px;">
+                    </div>
+                  </div>
                 </div>
-            </div>
-        </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="package-name">ESLint Config React App Bump</div>
+              </td>
+              <td>
+                <div class="package-description">Updated ESLint configuration for React applications</div>
+              </td>
+              <td>
+                <div class="package-links">
+                  <a href="https://github.com/chiefmikey/eslint-config-react-app-bump" target="_blank">GitHub</a>
+                  <a href="https://www.npmjs.com/package/eslint-config-react-app-bump" target="_blank">NPM</a>
+                </div>
+              </td>
+              <td>
+                <div class="stats-grid">
+                  <div class="stat-item">
+                    <div class="stat-label">Weekly</div>
+                    <div class="stat-value">
+                      <img src="https://img.shields.io/npm/dw/eslint-config-react-app-bump?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Weekly downloads" style="height: 20px;">
+                    </div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-label">Monthly</div>
+                    <div class="stat-value">
+                      <img src="https://img.shields.io/npm/dm/eslint-config-react-app-bump?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Monthly downloads" style="height: 20px;">
+                    </div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-label">Yearly</div>
+                    <div class="stat-value">
+                      <img src="https://img.shields.io/npm/dy/eslint-config-react-app-bump?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Yearly downloads" style="height: 20px;">
+                    </div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-label">Total</div>
+                    <div class="stat-value">
+                      <img src="https://img.shields.io/npm/dt/eslint-config-react-app-bump?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Total downloads" style="height: 20px;">
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Chrome Web Store</h2>
+        <table class="chrome-table">
+          <thead>
+            <tr>
+              <th>Extension</th>
+              <th>Description</th>
+              <th>Link</th>
+              <th>Statistics</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="extension-name">Tomorrow Night Darkly Theme</div>
+              </td>
+              <td>
+                <div class="extension-description">Dark theme for Chrome with Tomorrow Night color scheme</div>
+              </td>
+              <td>
+                <a href="https://chrome.google.com/webstore/detail/tomorrow-night-darkly/najhldfogkjhgdaaloddlfdgjfolnoik" target="_blank" class="extension-link">View in Store</a>
+              </td>
+              <td>
+                <div class="chrome-stats-grid">
+                  <div class="chrome-stat-item">
+                    <div class="chrome-stat-label">Rating Count</div>
+                    <div class="chrome-stat-value">
+                      <img src="https://img.shields.io/chrome-web-store/rating-count/najhldfogkjhgdaaloddlfdgjfolnoik?color=rgba(0,0,0,0)&style=for-the-badge" alt="Rating count" style="height: 20px;">
+                    </div>
+                  </div>
+                  <div class="chrome-stat-item">
+                    <div class="chrome-stat-label">Rating</div>
+                    <div class="chrome-stat-value">
+                      <img src="https://img.shields.io/chrome-web-store/rating/najhldfogkjhgdaaloddlfdgjfolnoik?color=rgba(0,0,0,0)&style=for-the-badge" alt="Rating" style="height: 20px;">
+                    </div>
+                  </div>
+                  <div class="chrome-stat-item">
+                    <div class="chrome-stat-label">Stars</div>
+                    <div class="chrome-stat-value">
+                      <img src="https://img.shields.io/chrome-web-store/stars/najhldfogkjhgdaaloddlfdgjfolnoik?color=rgba(0,0,0,0)&style=for-the-badge" alt="Stars" style="height: 20px;">
+                    </div>
+                  </div>
+                  <div class="chrome-stat-item">
+                    <div class="chrome-stat-label">Users</div>
+                    <div class="chrome-stat-value">
+                      <img src="https://img.shields.io/chrome-web-store/users/najhldfogkjhgdaaloddlfdgjfolnoik?color=rgba(0,0,0,0)&style=for-the-badge" alt="Users" style="height: 20px;">
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-</body>
+  </body>
 </html>
