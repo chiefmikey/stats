@@ -2,6 +2,7 @@
   "name": "stats",
   "version": "1.0.0",
   "description": "Automated stats tracking for npm packages and Chrome Web Store extensions",
+  "type": "module",
   "main": "src/index.js",
   "scripts": {
     "build": "node src/build.js",
@@ -16,7 +17,7 @@
     "node-cron": "^3.0.3"
   },
   "devDependencies": {
-    "mikey-pro": "^6.6.6"
+    "mikey-pro": "^10.1.0"
   },
   "homepage": "https://github.com/chiefmikey/stats#readme",
   "repository": {
@@ -31,11 +32,8 @@
   "contributors": [
     "Mikl Wolfe <wolfe@mikl.io> (https://mikl.io)"
   ],
-  "prettier": "@mikey-pro/prettier-config",
-  "eslintConfig": {
-    "extends": "@mikey-pro/eslint-config"
-  },
+  "prettier": "mikey-pro/prettier",
   "stylelint": {
-    "extends": "@mikey-pro/stylelint-config"
+    "extends": "mikey-pro/stylelint"
   }
 }
