@@ -1,7 +1,7 @@
 {
   "npm": [
     {
-      "name": "Mikey Pro Style Guide",
+      "name": "Mikey Pro",
       "package": "mikey-pro",
       "github": "https://github.com/mikey-pro/style-guide",
       "npm": "https://www.npmjs.com/package/mikey-pro",
@@ -22,12 +22,18 @@
       "description": "Updated ESLint configuration for React applications"
     }
   ],
+  "depup": {
+    "scope": "@depup",
+    "topN": 25,
+    "repo": "https://github.com/chiefmikey/depup",
+    "description": "Automated dependency updates -- republishes popular npm packages with updated dependencies"
+  },
   "chrome": [
     {
       "name": "Tomorrow Night Darkly Theme",
       "extensionId": "najhldfogkjhgdaaloddlfdgjfolnoik",
       "github": "https://github.com/mikey-pro/style-guide",
-      "store": "https://chrome.google.com/webstore/detail/tomorrow-night-darkly/najhldfogkjhgdaaloddlfdgjfolnoik",
+      "store": "https://chromewebstore.google.com/detail/tomorrow-night-darkly/najhldfogkjhgdaaloddlfdgjfolnoik",
       "description": "Dark theme for Chrome with Tomorrow Night color scheme"
     }
   ]

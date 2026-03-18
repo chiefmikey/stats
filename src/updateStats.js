@@ -16,8 +16,4 @@ console.log('Generated index.html');
 writeFileSync(path.join(ROOT, 'README.md'), generateReadme(packages, stats));
 console.log('Generated README.md');
 
-const apiData = { lastUpdated: new Date().toISOString(), packages, stats };
-writeFileSync(path.join(ROOT, 'api.json'), JSON.stringify(apiData, null, 2));
-console.log('Generated api.json');
-
-console.log('Build complete.');
+console.log('Done.');
