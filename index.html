@@ -6,408 +6,483 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Package Statistics Dashboard</title>
+    <title>Package Statistics</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
+      * { margin: 0; padding: 0; box-sizing: border-box; }
       body {
-        font-family:
-          -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: #f0f2f5;
         min-height: 100vh;
         padding: 20px;
       }
-
       .container {
         max-width: 1200px;
         margin: 0 auto;
         background: white;
-        border-radius: 20px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         overflow: hidden;
       }
-
       .header {
-        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+        background: #1a1a2e;
         color: white;
         padding: 40px;
         text-align: center;
       }
-
-      .header h1 {
-        font-size: 3rem;
-        margin-bottom: 10px;
-        font-weight: 700;
-      }
-
-      .header p {
-        font-size: 1.2rem;
-        opacity: 0.9;
-      }
-
+      .header h1 { font-size: 2.5rem; margin-bottom: 8px; font-weight: 700; }
+      .header p { font-size: 1.1rem; opacity: 0.8; }
       .last-updated {
-        background: rgba(255, 255, 255, 0.1);
-        padding: 10px 20px;
-        border-radius: 25px;
+        background: rgba(255,255,255,0.1);
+        padding: 8px 16px;
+        border-radius: 20px;
         display: inline-block;
-        margin-top: 20px;
-        font-size: 0.9rem;
+        margin-top: 16px;
+        font-size: 0.85rem;
       }
-
-      .section {
-        padding: 40px;
-      }
-
+      .section { padding: 40px; }
       .section-title {
-        font-size: 2rem;
-        margin-bottom: 30px;
-        color: #2c3e50;
-        border-bottom: 3px solid #3498db;
-        padding-bottom: 10px;
+        font-size: 1.6rem;
+        margin-bottom: 24px;
+        color: #1a1a2e;
+        border-bottom: 2px solid #e0e0e0;
+        padding-bottom: 8px;
       }
-
       .stats-grid {
         display: grid;
         gap: 20px;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       }
-
       .package-card {
         background: #f8f9fa;
-        border-radius: 15px;
-        padding: 25px;
+        border-radius: 10px;
+        padding: 24px;
         border: 1px solid #e9ecef;
-        transition:
-          transform 0.3s ease,
-          box-shadow 0.3s ease;
       }
-
-      .package-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      }
-
-      .package-name {
-        font-size: 1.3rem;
-        font-weight: 700;
-        color: #2c3e50;
-        margin-bottom: 10px;
-      }
-
-      .package-description {
-        color: #6c757d;
-        margin-bottom: 20px;
-        line-height: 1.5;
-      }
-
-      .package-links {
-        margin-bottom: 20px;
-      }
-
-      .package-links a {
-        color: #3498db;
-        text-decoration: none;
-        margin-right: 15px;
-        font-weight: 500;
-      }
-
-      .package-links a:hover {
-        text-decoration: underline;
-      }
-
+      .package-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+      .package-name { font-size: 1.2rem; font-weight: 700; color: #1a1a2e; margin-bottom: 8px; }
+      .package-description { color: #6c757d; margin-bottom: 16px; line-height: 1.5; }
+      .package-links a { color: #3498db; text-decoration: none; margin-right: 12px; font-weight: 500; }
+      .package-links a:hover { text-decoration: underline; }
       .stats-row {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: 15px;
-        margin-top: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 12px;
+        margin-top: 16px;
       }
-
       .stat-badge {
         text-align: center;
-        padding: 20px 16px;
+        padding: 16px 12px;
         background: white;
-        border-radius: 8px;
+        border-radius: 6px;
         border: 1px solid #dee2e6;
-        min-height: 80px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
       }
-
-      .stat-badge img {
-        max-width: 100%;
-        height: 60px;
-        width: auto;
-      }
-
-      .chrome-stats {
+      .stat-badge img { max-width: 100%; height: 50px; width: auto; }
+      .depup-summary {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+      .summary-card {
+        background: #f8f9fa;
+        border-radius: 8px;
+        padding: 16px;
+        text-align: center;
+        border: 1px solid #e9ecef;
+      }
+      .summary-card .label { font-size: 0.8rem; color: #6c757d; text-transform: uppercase; letter-spacing: 0.5px; }
+      .summary-card .value { font-size: 1.6rem; font-weight: 700; color: #1a1a2e; margin-top: 4px; }
+      .depup-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+      .depup-table th {
+        background: #1a1a2e;
+        color: white;
+        padding: 10px 12px;
+        text-align: left;
+        font-weight: 500;
+      }
+      .depup-table td { padding: 8px 12px; border-bottom: 1px solid #e9ecef; }
+      .depup-table tr:hover { background: #f8f9fa; }
+      .depup-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+      .status-current { color: #27ae60; font-weight: 500; }
+      .status-behind { color: #e67e22; font-weight: 500; }
+      .chrome-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 20px;
       }
-
       .chrome-card {
-        background: #2c3e50;
+        background: #1a1a2e;
         color: white;
-        border-radius: 6px;
+        border-radius: 10px;
         padding: 24px;
         text-align: center;
       }
-
-      .chrome-card h3 {
-        font-size: 1.1rem;
-        margin-bottom: 8px;
-        color: white;
-        font-weight: 500;
-      }
-
-      .chrome-card p {
-        color: rgba(255, 255, 255, 0.9);
-        font-size: 0.9rem;
-        margin-bottom: 16px;
-      }
-
+      .chrome-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+      .chrome-card p { opacity: 0.8; font-size: 0.9rem; margin-bottom: 16px; }
       .chrome-stats-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 8px;
         margin-bottom: 16px;
       }
-
-      .chrome-card .stat-badge {
-        background: rgba(255, 255, 255, 0.1);
-      }
-
-      .chrome-card a {
-        color: #007bff;
-        text-decoration: none;
-        font-size: 0.9rem;
-      }
-
-      .chrome-card a:hover {
-        text-decoration: underline;
-      }
-
+      .chrome-card .stat-badge { background: rgba(255,255,255,0.1); border-color: transparent; }
+      .chrome-link a { color: #74b9ff; text-decoration: none; font-weight: 500; }
+      .chrome-link a:hover { text-decoration: underline; }
       @media (max-width: 768px) {
-        .header h1 {
-          font-size: 2rem;
-        }
-
-        .section {
-          padding: 20px;
-        }
-
-        .stats-grid {
-          grid-template-columns: 1fr;
-        }
+        .header h1 { font-size: 1.8rem; }
+        .section { padding: 20px; }
+        .stats-grid { grid-template-columns: 1fr; }
+        .depup-table { font-size: 0.8rem; }
       }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="header">
-        <h1>📊 Package Statistics</h1>
-        <p>Real-time download and usage statistics for my packages</p>
-        <div class="last-updated">Last updated: 9/12/2025, 3:39:31 PM</div>
+        <h1>Package Statistics</h1>
+        <p>Download and usage statistics</p>
+        <div class="last-updated">Last updated: 3/19/2026, 12:17:24 AM</div>
       </div>
 
       <div class="section">
-        <h2 class="section-title">📦 NPM Packages</h2>
+        <h2 class="section-title">NPM Packages</h2>
         <div class="stats-grid">
-          <div class="package-card">
-            <div class="package-name">Mikey Pro Style Guide</div>
-            <div class="package-description">
-              Comprehensive style guide and configuration packages
-            </div>
-            <div class="package-links">
-              <a
-                href="https://github.com/mikey-pro/style-guide"
-                target="_blank"
-                >GitHub</a
-              >
-              <a
-                href="https://www.npmjs.com/package/mikey-pro"
-                target="_blank"
-                >NPM</a
-              >
-            </div>
-            <div class="stats-row">
-              <div class="stat-badge">
-                <img
-                  src="https://img.shields.io/npm/dw/mikey-pro?color=rgba(0,0,0,0)&style=for-the-badge&label="
-                  alt="Weekly downloads"
-                />
-              </div>
-              <div class="stat-badge">
-                <img
-                  src="https://img.shields.io/npm/dm/mikey-pro?color=rgba(0,0,0,0)&style=for-the-badge&label="
-                  alt="Monthly downloads"
-                />
-              </div>
-              <div class="stat-badge">
-                <img
-                  src="https://img.shields.io/npm/dy/mikey-pro?color=rgba(0,0,0,0)&style=for-the-badge&label="
-                  alt="Yearly downloads"
-                />
-              </div>
-              <div class="stat-badge">
-                <img
-                  src="https://img.shields.io/npm/dt/mikey-pro?color=rgba(0,0,0,0)&style=for-the-badge&label="
-                  alt="Total downloads"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="package-card">
-            <div class="package-name">ESLint Plugin Disable Autofix</div>
-            <div class="package-description">
-              ESLint plugin to disable autofix for specific rules
-            </div>
-            <div class="package-links">
-              <a
-                href="https://github.com/chiefmikey/eslint-plugin-disable-autofix"
-                target="_blank"
-                >GitHub</a
-              >
-              <a
-                href="https://www.npmjs.com/package/eslint-plugin-disable-autofix"
-                target="_blank"
-                >NPM</a
-              >
-            </div>
-            <div class="stats-row">
-              <div class="stat-badge">
-                <img
-                  src="https://img.shields.io/npm/dw/eslint-plugin-disable-autofix?color=rgba(0,0,0,0)&style=for-the-badge&label="
-                  alt="Weekly downloads"
-                />
-              </div>
-              <div class="stat-badge">
-                <img
-                  src="https://img.shields.io/npm/dm/eslint-plugin-disable-autofix?color=rgba(0,0,0,0)&style=for-the-badge&label="
-                  alt="Monthly downloads"
-                />
-              </div>
-              <div class="stat-badge">
-                <img
-                  src="https://img.shields.io/npm/dy/eslint-plugin-disable-autofix?color=rgba(0,0,0,0)&style=for-the-badge&label="
-                  alt="Yearly downloads"
-                />
-              </div>
-              <div class="stat-badge">
-                <img
-                  src="https://img.shields.io/npm/dt/eslint-plugin-disable-autofix?color=rgba(0,0,0,0)&style=for-the-badge&label="
-                  alt="Total downloads"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="package-card">
-            <div class="package-name">ESLint Config React App Bump</div>
-            <div class="package-description">
-              Updated ESLint configuration for React applications
-            </div>
-            <div class="package-links">
-              <a
-                href="https://github.com/chiefmikey/eslint-config-react-app-bump"
-                target="_blank"
-                >GitHub</a
-              >
-              <a
-                href="https://www.npmjs.com/package/eslint-config-react-app-bump"
-                target="_blank"
-                >NPM</a
-              >
-            </div>
-            <div class="stats-row">
-              <div class="stat-badge">
-                <img
-                  src="https://img.shields.io/npm/dw/eslint-config-react-app-bump?color=rgba(0,0,0,0)&style=for-the-badge&label="
-                  alt="Weekly downloads"
-                />
-              </div>
-              <div class="stat-badge">
-                <img
-                  src="https://img.shields.io/npm/dm/eslint-config-react-app-bump?color=rgba(0,0,0,0)&style=for-the-badge&label="
-                  alt="Monthly downloads"
-                />
-              </div>
-              <div class="stat-badge">
-                <img
-                  src="https://img.shields.io/npm/dy/eslint-config-react-app-bump?color=rgba(0,0,0,0)&style=for-the-badge&label="
-                  alt="Yearly downloads"
-                />
-              </div>
-              <div class="stat-badge">
-                <img
-                  src="https://img.shields.io/npm/dt/eslint-config-react-app-bump?color=rgba(0,0,0,0)&style=for-the-badge&label="
-                  alt="Total downloads"
-                />
-              </div>
-            </div>
-          </div>
+                <div class="package-card">
+                    <div class="package-name">Mikey Pro</div>
+                    <div class="package-description">Comprehensive style guide and configuration packages</div>
+                    <div class="package-links">
+                        <a href="https://github.com/mikey-pro/style-guide" target="_blank" rel="noreferrer">GitHub</a>
+                        <a href="https://www.npmjs.com/package/mikey-pro" target="_blank" rel="noreferrer">NPM</a>
+                    </div>
+                    <div class="stats-row">
+                        <div class="stat-badge"><img src="https://img.shields.io/npm/dw/mikey-pro?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Weekly"></div>
+                        <div class="stat-badge"><img src="https://img.shields.io/npm/dm/mikey-pro?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Monthly"></div>
+                        <div class="stat-badge"><img src="https://img.shields.io/npm/dy/mikey-pro?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Yearly"></div>
+                        <div class="stat-badge"><img src="https://img.shields.io/npm/dt/mikey-pro?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Total"></div>
+                    </div>
+                </div>
+                <div class="package-card">
+                    <div class="package-name">ESLint Plugin Disable Autofix</div>
+                    <div class="package-description">ESLint plugin to disable autofix for specific rules</div>
+                    <div class="package-links">
+                        <a href="https://github.com/chiefmikey/eslint-plugin-disable-autofix" target="_blank" rel="noreferrer">GitHub</a>
+                        <a href="https://www.npmjs.com/package/eslint-plugin-disable-autofix" target="_blank" rel="noreferrer">NPM</a>
+                    </div>
+                    <div class="stats-row">
+                        <div class="stat-badge"><img src="https://img.shields.io/npm/dw/eslint-plugin-disable-autofix?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Weekly"></div>
+                        <div class="stat-badge"><img src="https://img.shields.io/npm/dm/eslint-plugin-disable-autofix?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Monthly"></div>
+                        <div class="stat-badge"><img src="https://img.shields.io/npm/dy/eslint-plugin-disable-autofix?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Yearly"></div>
+                        <div class="stat-badge"><img src="https://img.shields.io/npm/dt/eslint-plugin-disable-autofix?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Total"></div>
+                    </div>
+                </div>
+                <div class="package-card">
+                    <div class="package-name">ESLint Config React App Bump</div>
+                    <div class="package-description">Updated ESLint configuration for React applications</div>
+                    <div class="package-links">
+                        <a href="https://github.com/chiefmikey/eslint-config-react-app-bump" target="_blank" rel="noreferrer">GitHub</a>
+                        <a href="https://www.npmjs.com/package/eslint-config-react-app-bump" target="_blank" rel="noreferrer">NPM</a>
+                    </div>
+                    <div class="stats-row">
+                        <div class="stat-badge"><img src="https://img.shields.io/npm/dw/eslint-config-react-app-bump?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Weekly"></div>
+                        <div class="stat-badge"><img src="https://img.shields.io/npm/dm/eslint-config-react-app-bump?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Monthly"></div>
+                        <div class="stat-badge"><img src="https://img.shields.io/npm/dy/eslint-config-react-app-bump?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Yearly"></div>
+                        <div class="stat-badge"><img src="https://img.shields.io/npm/dt/eslint-config-react-app-bump?color=rgba(0,0,0,0)&style=for-the-badge&label=" alt="Total"></div>
+                    </div>
+                </div>
         </div>
       </div>
 
       <div class="section">
-        <h2 class="section-title">🌐 Chrome Web Store</h2>
-        <div class="chrome-stats">
-          <div class="chrome-card">
-            <h3>Tomorrow Night Darkly Theme</h3>
-            <p style="margin-bottom: 20px; opacity: 0.9">
-              Dark theme for Chrome with Tomorrow Night color scheme
-            </p>
-            <div class="chrome-stats-grid">
-              <div
-                class="stat-badge"
-                style="background: rgba(255, 255, 255, 0.2)"
-              >
-                <img
-                  src="https://img.shields.io/chrome-web-store/rating-count/najhldfogkjhgdaaloddlfdgjfolnoik?color=rgba(0,0,0,0)&style=for-the-badge"
-                  alt="Rating count"
-                />
-              </div>
-              <div
-                class="stat-badge"
-                style="background: rgba(255, 255, 255, 0.2)"
-              >
-                <img
-                  src="https://img.shields.io/chrome-web-store/rating/najhldfogkjhgdaaloddlfdgjfolnoik?color=rgba(0,0,0,0)&style=for-the-badge"
-                  alt="Rating"
-                />
-              </div>
-              <div
-                class="stat-badge"
-                style="background: rgba(255, 255, 255, 0.2)"
-              >
-                <img
-                  src="https://img.shields.io/chrome-web-store/stars/najhldfogkjhgdaaloddlfdgjfolnoik?color=rgba(0,0,0,0)&style=for-the-badge"
-                  alt="Stars"
-                />
-              </div>
-              <div
-                class="stat-badge"
-                style="background: rgba(255, 255, 255, 0.2)"
-              >
-                <img
-                  src="https://img.shields.io/chrome-web-store/users/najhldfogkjhgdaaloddlfdgjfolnoik?color=rgba(0,0,0,0)&style=for-the-badge"
-                  alt="Users"
-                />
-              </div>
-            </div>
-            <div style="margin-top: 15px">
-              <a
-                href="https://chrome.google.com/webstore/detail/tomorrow-night-darkly/najhldfogkjhgdaaloddlfdgjfolnoik"
-                target="_blank"
-                style="color: white; text-decoration: none; font-weight: 500"
-                >View in Store</a
-              >
-            </div>
-          </div>
+        <h2 class="section-title">@depup Packages</h2>
+        <p style="color: #6c757d; margin-bottom: 20px;">Automated dependency updates -- republishes popular npm packages with updated dependencies</p>
+        <div class="depup-summary">
+          <div class="summary-card"><div class="label">Total Packages</div><div class="value">1,576</div></div>
+          <div class="summary-card"><div class="label">Weekly Downloads</div><div class="value">1,201</div></div>
+          <div class="summary-card"><div class="label">Monthly Downloads</div><div class="value">2,571</div></div>
+          <div class="summary-card"><div class="label">Yearly Downloads</div><div class="value">3,853</div></div>
+          <div class="summary-card"><div class="label">Current</div><div class="value">1008</div></div>
+          <div class="summary-card"><div class="label">Behind</div><div class="value">568</div></div>
+        </div>
+        <table class="depup-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Package</th>
+              <th>Weekly</th>
+              <th>Monthly</th>
+              <th>Yearly</th>
+              <th>@depup Version</th>
+              <th>Upstream Version</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><a href="https://www.npmjs.com/package/@depup/vitest" target="_blank" rel="noreferrer">@depup/vitest</a></td>
+                            <td class="num">204</td>
+                            <td class="num">239</td>
+                            <td class="num">--</td>
+                            <td>4.1.0-depup.1</td>
+                            <td>4.1.0</td>
+                            <td class="status-current">current</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><a href="https://www.npmjs.com/package/@depup/jsdom" target="_blank" rel="noreferrer">@depup/jsdom</a></td>
+                            <td class="num">211</td>
+                            <td class="num">211</td>
+                            <td class="num">211</td>
+                            <td>29.0.0-depup.0</td>
+                            <td>29.0.0</td>
+                            <td class="status-current">current</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><a href="https://www.npmjs.com/package/@depup/node-fetch" target="_blank" rel="noreferrer">@depup/node-fetch</a></td>
+                            <td class="num">--</td>
+                            <td class="num">210</td>
+                            <td class="num">--</td>
+                            <td>3.3.2-depup.1</td>
+                            <td>3.3.2</td>
+                            <td class="status-current">current</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><a href="https://www.npmjs.com/package/@depup/nanoid" target="_blank" rel="noreferrer">@depup/nanoid</a></td>
+                            <td class="num">--</td>
+                            <td class="num">183</td>
+                            <td class="num">--</td>
+                            <td>5.1.7-depup.0</td>
+                            <td>5.1.7</td>
+                            <td class="status-current">current</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><a href="https://www.npmjs.com/package/@depup/nodemailer" target="_blank" rel="noreferrer">@depup/nodemailer</a></td>
+                            <td class="num">--</td>
+                            <td class="num">151</td>
+                            <td class="num">--</td>
+                            <td>8.0.3-depup.0</td>
+                            <td>8.0.3</td>
+                            <td class="status-current">current</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><a href="https://www.npmjs.com/package/@depup/nx" target="_blank" rel="noreferrer">@depup/nx</a></td>
+                            <td class="num">--</td>
+                            <td class="num">114</td>
+                            <td class="num">--</td>
+                            <td>22.6.0-depup.0</td>
+                            <td>22.6.0</td>
+                            <td class="status-current">current</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><a href="https://www.npmjs.com/package/@depup/p-limit" target="_blank" rel="noreferrer">@depup/p-limit</a></td>
+                            <td class="num">--</td>
+                            <td class="num">107</td>
+                            <td class="num">--</td>
+                            <td>7.3.0-depup.0</td>
+                            <td>7.3.0</td>
+                            <td class="status-current">current</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td><a href="https://www.npmjs.com/package/@depup/pino" target="_blank" rel="noreferrer">@depup/pino</a></td>
+                            <td class="num">--</td>
+                            <td class="num">105</td>
+                            <td class="num">--</td>
+                            <td>10.3.1-depup.1</td>
+                            <td>10.3.1</td>
+                            <td class="status-current">current</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td><a href="https://www.npmjs.com/package/@depup/body-parser" target="_blank" rel="noreferrer">@depup/body-parser</a></td>
+                            <td class="num">--</td>
+                            <td class="num">104</td>
+                            <td class="num">104</td>
+                            <td>2.2.2-depup.0</td>
+                            <td>2.2.2</td>
+                            <td class="status-current">current</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td><a href="https://www.npmjs.com/package/@depup/7zip-bin" target="_blank" rel="noreferrer">@depup/7zip-bin</a></td>
+                            <td class="num">11</td>
+                            <td class="num">101</td>
+                            <td class="num">101</td>
+                            <td>5.2.0-depup.0</td>
+                            <td>5.2.0</td>
+                            <td class="status-current">current</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td><a href="https://www.npmjs.com/package/@depup/camelcase" target="_blank" rel="noreferrer">@depup/camelcase</a></td>
+                            <td class="num">10</td>
+                            <td class="num">100</td>
+                            <td class="num">100</td>
+                            <td>9.0.0-depup.0</td>
+                            <td>9.0.0</td>
+                            <td class="status-current">current</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td><a href="https://www.npmjs.com/package/@depup/ms" target="_blank" rel="noreferrer">@depup/ms</a></td>
+                            <td class="num">--</td>
+                            <td class="num">100</td>
+                            <td class="num">--</td>
+                            <td>2.1.3-depup.0</td>
+                            <td>2.1.3</td>
+                            <td class="status-current">current</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td><a href="https://www.npmjs.com/package/@depup/shiki" target="_blank" rel="noreferrer">@depup/shiki</a></td>
+                            <td class="num">11</td>
+                            <td class="num">100</td>
+                            <td class="num">100</td>
+                            <td>4.0.2-depup.0</td>
+                            <td>4.0.2</td>
+                            <td class="status-current">current</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td><a href="https://www.npmjs.com/package/@depup/ora" target="_blank" rel="noreferrer">@depup/ora</a></td>
+                            <td class="num">--</td>
+                            <td class="num">95</td>
+                            <td class="num">--</td>
+                            <td>9.3.0-depup.0</td>
+                            <td>9.3.0</td>
+                            <td class="status-current">current</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td><a href="https://www.npmjs.com/package/@depup/passport-local" target="_blank" rel="noreferrer">@depup/passport-local</a></td>
+                            <td class="num">--</td>
+                            <td class="num">93</td>
+                            <td class="num">--</td>
+                            <td>1.0.0-depup.0</td>
+                            <td>1.0.0</td>
+                            <td class="status-current">current</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td><a href="https://www.npmjs.com/package/@depup/pretty-bytes" target="_blank" rel="noreferrer">@depup/pretty-bytes</a></td>
+                            <td class="num">--</td>
+                            <td class="num">93</td>
+                            <td class="num">--</td>
+                            <td>7.1.0-depup.0</td>
+                            <td>7.1.0</td>
+                            <td class="status-current">current</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td><a href="https://www.npmjs.com/package/@depup/prisma__client" target="_blank" rel="noreferrer">@depup/prisma__client</a></td>
+                            <td class="num">93</td>
+                            <td class="num">93</td>
+                            <td class="num">93</td>
+                            <td>7.5.0-depup.0</td>
+                            <td>unknown</td>
+                            <td class="status-behind">behind</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td><a href="https://www.npmjs.com/package/@depup/postcss" target="_blank" rel="noreferrer">@depup/postcss</a></td>
+                            <td class="num">--</td>
+                            <td class="num">85</td>
+                            <td class="num">--</td>
+                            <td>8.5.8-depup.0</td>
+                            <td>8.5.8</td>
+                            <td class="status-current">current</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td><a href="https://www.npmjs.com/package/@depup/clsx" target="_blank" rel="noreferrer">@depup/clsx</a></td>
+                            <td class="num">--</td>
+                            <td class="num">84</td>
+                            <td class="num">84</td>
+                            <td>2.1.1-depup.0</td>
+                            <td>2.1.1</td>
+                            <td class="status-current">current</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td><a href="https://www.npmjs.com/package/@depup/nestjs__platform-express" target="_blank" rel="noreferrer">@depup/nestjs__platform-express</a></td>
+                            <td class="num">--</td>
+                            <td class="num">81</td>
+                            <td class="num">--</td>
+                            <td>11.1.17-depup.0</td>
+                            <td>unknown</td>
+                            <td class="status-behind">behind</td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td><a href="https://www.npmjs.com/package/@depup/emotion__styled" target="_blank" rel="noreferrer">@depup/emotion__styled</a></td>
+                            <td class="num">79</td>
+                            <td class="num">79</td>
+                            <td class="num">--</td>
+                            <td>11.14.1-depup.1</td>
+                            <td>unknown</td>
+                            <td class="status-behind">behind</td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td><a href="https://www.npmjs.com/package/@depup/leaflet" target="_blank" rel="noreferrer">@depup/leaflet</a></td>
+                            <td class="num">3</td>
+                            <td class="num">29</td>
+                            <td class="num">127</td>
+                            <td>1.9.4-depup.1</td>
+                            <td>1.9.4</td>
+                            <td class="status-current">current</td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td><a href="https://www.npmjs.com/package/@depup/sindresorhus__slugify" target="_blank" rel="noreferrer">@depup/sindresorhus__slugify</a></td>
+                            <td class="num">14</td>
+                            <td class="num">14</td>
+                            <td class="num">--</td>
+                            <td>3.0.0-depup.0</td>
+                            <td>1.1.1</td>
+                            <td class="status-behind">behind</td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td><a href="https://www.npmjs.com/package/@depup/0no-co__graphql.web" target="_blank" rel="noreferrer">@depup/0no-co__graphql.web</a></td>
+                            <td class="num">--</td>
+                            <td class="num">--</td>
+                            <td class="num">--</td>
+                            <td>1.2.0-depup.0</td>
+                            <td>unknown</td>
+                            <td class="status-behind">behind</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td><a href="https://www.npmjs.com/package/@depup/abstract-logging" target="_blank" rel="noreferrer">@depup/abstract-logging</a></td>
+                            <td class="num">--</td>
+                            <td class="num">--</td>
+                            <td class="num">--</td>
+                            <td>2.0.1-depup.0</td>
+                            <td>2.0.1</td>
+                            <td class="status-current">current</td>
+                        </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Chrome Web Store</h2>
+        <div class="chrome-grid">
+                <div class="chrome-card">
+                    <h3>Tomorrow Night Darkly Theme</h3>
+                    <p>Dark theme for Chrome with Tomorrow Night color scheme</p>
+                    <div class="chrome-stats-grid">
+                        <div class="stat-badge"><img src="https://img.shields.io/chrome-web-store/rating/najhldfogkjhgdaaloddlfdgjfolnoik?color=rgba(0,0,0,0)&style=for-the-badge" alt="Rating"></div>
+                        <div class="stat-badge"><img src="https://img.shields.io/chrome-web-store/users/najhldfogkjhgdaaloddlfdgjfolnoik?color=rgba(0,0,0,0)&style=for-the-badge" alt="Users"></div>
+                    </div>
+                    <div class="chrome-link"><a href="https://chromewebstore.google.com/detail/tomorrow-night-darkly/najhldfogkjhgdaaloddlfdgjfolnoik" target="_blank" rel="noreferrer">View in Store</a></div>
+                </div>
         </div>
       </div>
     </div>
