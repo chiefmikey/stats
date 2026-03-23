@@ -19,41 +19,41 @@ Automated dependency updates -- republishes popular npm packages with updated de
 | Metric | Value |
 |--------|------:|
 | Total packages | 1,996 |
-| Weekly downloads | 1,854 |
-| Monthly downloads | 7,292 |
-| Yearly downloads | 2,464 |
-| Current with upstream | 1351 |
-| Behind upstream | 645 |
+| Weekly downloads | 3,091 |
+| Monthly downloads | 4,932 |
+| Yearly downloads | 7,892 |
+| Current with upstream | 1344 |
+| Behind upstream | 652 |
 
 ### Top 25 by Monthly Downloads
 
 | # | Package | Weekly | Monthly | Yearly | @depup | Upstream | Status |
 |---|---------|-------:|--------:|-------:|--------|----------|--------|
-| 1 | [@depup/tanstack__react-router](https://www.npmjs.com/package/@depup/tanstack__react-router) | -- | 783 | -- | 1.168.2-depup.0 | unknown | behind |
-| 2 | [@depup/vite](https://www.npmjs.com/package/@depup/vite) | -- | 433 | -- | 8.0.1-depup.0 | 8.0.1 | current |
-| 3 | [@depup/turbo](https://www.npmjs.com/package/@depup/turbo) | -- | 343 | -- | 2.8.20-depup.0 | 2.8.20 | current |
-| 4 | [@depup/undici](https://www.npmjs.com/package/@depup/undici) | -- | 299 | -- | 7.24.5-depup.0 | 7.24.5 | current |
-| 5 | [@depup/vitest](https://www.npmjs.com/package/@depup/vitest) | -- | 251 | -- | 4.1.0-depup.1 | 4.1.0 | current |
-| 6 | [@depup/aws-sdk__util-user-agent-node](https://www.npmjs.com/package/@depup/aws-sdk__util-user-agent-node) | 206 | 206 | 206 | 3.973.10-depup.0 | unknown | behind |
-| 7 | [@depup/tsup](https://www.npmjs.com/package/@depup/tsup) | -- | 201 | -- | 8.5.1-depup.1 | 8.5.1 | current |
-| 8 | [@depup/rollup__rollup-darwin-arm64](https://www.npmjs.com/package/@depup/rollup__rollup-darwin-arm64) | -- | 192 | 192 | 4.60.0-depup.0 | unknown | behind |
-| 9 | [@depup/tanstack__query-core](https://www.npmjs.com/package/@depup/tanstack__query-core) | -- | 191 | -- | 5.95.0-depup.0 | unknown | behind |
-| 10 | [@depup/rollup__rollup-linux-riscv64-musl](https://www.npmjs.com/package/@depup/rollup__rollup-linux-riscv64-musl) | 186 | 186 | -- | 4.60.0-depup.0 | unknown | behind |
-| 11 | [@depup/typeorm](https://www.npmjs.com/package/@depup/typeorm) | -- | 142 | -- | 0.3.28-depup.37 | 0.3.28 | current |
-| 12 | [@depup/vanilla-extract__css](https://www.npmjs.com/package/@depup/vanilla-extract__css) | -- | 134 | -- | 1.20.0-depup.0 | unknown | behind |
-| 13 | [@depup/trpc__react-query](https://www.npmjs.com/package/@depup/trpc__react-query) | -- | 130 | -- | 11.14.1-depup.0 | unknown | behind |
-| 14 | [@depup/vercel__postgres](https://www.npmjs.com/package/@depup/vercel__postgres) | -- | 124 | -- | 0.10.0-depup.1 | unknown | behind |
-| 15 | [@depup/kubernetes-client](https://www.npmjs.com/package/@depup/kubernetes-client) | 119 | 119 | 119 | 9.0.0-depup.1 | 9.0.0 | current |
-| 16 | [@depup/tar](https://www.npmjs.com/package/@depup/tar) | -- | 118 | -- | 7.5.12-depup.0 | 7.5.12 | current |
-| 17 | [@depup/devcert](https://www.npmjs.com/package/@depup/devcert) | 116 | 116 | -- | 1.2.3-depup.1 | 1.2.3 | current |
-| 18 | [@depup/strip-json-comments](https://www.npmjs.com/package/@depup/strip-json-comments) | -- | 114 | -- | 5.0.3-depup.0 | 5.0.3 | current |
-| 19 | [@depup/mssql](https://www.npmjs.com/package/@depup/mssql) | 12 | 113 | 113 | 12.2.1-depup.0 | 12.2.1 | current |
-| 20 | [@depup/next__swc-linux-arm64-musl](https://www.npmjs.com/package/@depup/next__swc-linux-arm64-musl) | 112 | 112 | 112 | 16.2.1-depup.0 | unknown | behind |
-| 21 | [@depup/styled-components](https://www.npmjs.com/package/@depup/styled-components) | -- | 112 | -- | 6.3.12-depup.0 | 6.3.12 | current |
-| 22 | [@depup/7zip-bin](https://www.npmjs.com/package/@depup/7zip-bin) | 5 | 103 | 103 | 5.2.0-depup.0 | 5.2.0 | current |
-| 23 | [@depup/google-cloud__storage](https://www.npmjs.com/package/@depup/google-cloud__storage) | -- | 102 | 102 | 7.19.0-depup.1 | unknown | behind |
-| 24 | [@depup/puppeteer-core](https://www.npmjs.com/package/@depup/puppeteer-core) | 102 | 102 | -- | 24.40.0-depup.1 | 24.40.0 | current |
-| 25 | [@depup/tedious](https://www.npmjs.com/package/@depup/tedious) | -- | 102 | -- | 19.2.1-depup.1 | 19.2.1 | current |
+| 1 | [@depup/nuxt](https://www.npmjs.com/package/@depup/nuxt) | -- | 482 | -- | 4.4.2-depup.5 | 4.4.2 | current |
+| 2 | [@depup/rate-limiter-flexible](https://www.npmjs.com/package/@depup/rate-limiter-flexible) | -- | 295 | -- | 10.0.1-depup.0 | 10.0.1 | current |
+| 3 | [@depup/node-fetch](https://www.npmjs.com/package/@depup/node-fetch) | -- | 218 | -- | 3.3.2-depup.1 | 3.3.2 | current |
+| 4 | [@depup/pinia](https://www.npmjs.com/package/@depup/pinia) | -- | 196 | -- | 3.0.4-depup.1 | 3.0.4 | current |
+| 5 | [@depup/rollup__rollup-darwin-x64](https://www.npmjs.com/package/@depup/rollup__rollup-darwin-x64) | 188 | 188 | 188 | 4.60.0-depup.0 | unknown | behind |
+| 6 | [@depup/nodemailer](https://www.npmjs.com/package/@depup/nodemailer) | -- | 166 | -- | 8.0.3-depup.0 | 8.0.3 | current |
+| 7 | [@depup/set-cookie-parser](https://www.npmjs.com/package/@depup/set-cookie-parser) | 141 | 141 | -- | 3.1.0-depup.0 | 3.1.0 | current |
+| 8 | [@depup/jest-circus](https://www.npmjs.com/package/@depup/jest-circus) | 134 | 134 | 134 | 30.3.0-depup.1 | 30.3.0 | current |
+| 9 | [@depup/next__swc-linux-x64-gnu](https://www.npmjs.com/package/@depup/next__swc-linux-x64-gnu) | -- | 119 | -- | 16.2.1-depup.0 | unknown | behind |
+| 10 | [@depup/simple-git](https://www.npmjs.com/package/@depup/simple-git) | -- | 117 | 117 | 3.33.0-depup.12 | 3.33.0 | current |
+| 11 | [@depup/type-fest](https://www.npmjs.com/package/@depup/type-fest) | 16 | 116 | 116 | 5.5.0-depup.0 | 5.5.0 | current |
+| 12 | [@depup/dockerode](https://www.npmjs.com/package/@depup/dockerode) | -- | 112 | 112 | 4.0.10-depup.0 | 4.0.10 | current |
+| 13 | [@depup/p-limit](https://www.npmjs.com/package/@depup/p-limit) | -- | 109 | -- | 7.3.0-depup.0 | 7.3.0 | current |
+| 14 | [@depup/next__env](https://www.npmjs.com/package/@depup/next__env) | 104 | 104 | 104 | 16.2.1-depup.0 | unknown | behind |
+| 15 | [@depup/7zip-bin](https://www.npmjs.com/package/@depup/7zip-bin) | 5 | 103 | 103 | 5.2.0-depup.0 | 5.2.0 | current |
+| 16 | [@depup/mongodb](https://www.npmjs.com/package/@depup/mongodb) | 7 | 103 | 103 | 7.1.0-depup.0 | 7.1.0 | current |
+| 17 | [@depup/nyc](https://www.npmjs.com/package/@depup/nyc) | -- | 103 | -- | 18.0.0-depup.0 | 18.0.0 | current |
+| 18 | [@depup/portfinder](https://www.npmjs.com/package/@depup/portfinder) | -- | 103 | -- | 1.0.38-depup.0 | 1.0.38 | current |
+| 19 | [@depup/puppeteer-core](https://www.npmjs.com/package/@depup/puppeteer-core) | -- | 102 | -- | 24.40.0-depup.1 | 24.40.0 | current |
+| 20 | [@depup/micromatch](https://www.npmjs.com/package/@depup/micromatch) | 6 | 100 | 196 | 1.0.0-depup.0 | 4.0.8 | behind |
+| 21 | [@depup/p-retry](https://www.npmjs.com/package/@depup/p-retry) | -- | 100 | -- | 7.1.1-depup.0 | 7.1.1 | current |
+| 22 | [@depup/ora](https://www.npmjs.com/package/@depup/ora) | -- | 97 | -- | 9.3.0-depup.0 | 9.3.0 | current |
+| 23 | [@depup/pretty-bytes](https://www.npmjs.com/package/@depup/pretty-bytes) | -- | 95 | -- | 7.1.0-depup.0 | 7.1.0 | current |
+| 24 | [@depup/kleur](https://www.npmjs.com/package/@depup/kleur) | 2 | 93 | 93 | 4.1.5-depup.0 | 4.1.5 | current |
+| 25 | [@depup/picocolors](https://www.npmjs.com/package/@depup/picocolors) | -- | 90 | -- | 1.1.1-depup.0 | 1.1.1 | current |
 
 ## Chrome Web Store
 
