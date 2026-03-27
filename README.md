@@ -8,9 +8,9 @@ Last updated: 2026-03-27
 
 | Package | Weekly | Monthly | Yearly | Total |
 |---------|-------:|--------:|-------:|------:|
-| [Mikey Pro](https://www.npmjs.com/package/mikey-pro) | 504 | 3,630 | 12,533 | 17,129 |
-| [ESLint Plugin Disable Autofix](https://www.npmjs.com/package/eslint-plugin-disable-autofix) | 104,563 | 420,308 | 2,647,096 | 3,383,451 |
-| [ESLint Config React App Bump](https://www.npmjs.com/package/eslint-config-react-app-bump) | 1,053 | 3,899 | 65,214 | 88,005 |
+| [Mikey Pro](https://www.npmjs.com/package/mikey-pro) | 204 | 3,647 | 12,550 | 17,159 |
+| [ESLint Plugin Disable Autofix](https://www.npmjs.com/package/eslint-plugin-disable-autofix) | 113,649 | 429,317 | 2,666,679 | 3,408,921 |
+| [ESLint Config React App Bump](https://www.npmjs.com/package/eslint-config-react-app-bump) | 1,129 | 3,962 | 65,068 | 88,210 |
 
 ## @depup Packages
 
@@ -19,9 +19,9 @@ Automated dependency updates -- republishes popular npm packages with updated de
 | Metric | Value |
 |--------|------:|
 | Total packages | 2,013 |
-| Weekly downloads | 12,122 |
-| Monthly downloads | 9,869 |
-| Yearly downloads | 16,486 |
+| Weekly downloads | 11,492 |
+| Monthly downloads | 16,319 |
+| Yearly downloads | 10,964 |
 | Current with upstream | 1359 |
 | Behind upstream | 654 |
 
@@ -29,31 +29,31 @@ Automated dependency updates -- republishes popular npm packages with updated de
 
 | # | Package | Weekly | Monthly | Yearly | @depup | Upstream | Status |
 |---|---------|-------:|--------:|-------:|--------|----------|--------|
-| 1 | [@depup/eslint-plugin-storybook](https://www.npmjs.com/package/@depup/eslint-plugin-storybook) | -- | 447 | -- | 10.3.3-depup.0 | 10.3.3 | current |
-| 2 | [@depup/expo__cli](https://www.npmjs.com/package/@depup/expo__cli) | -- | 424 | -- | 55.0.18-depup.2 | unknown | behind |
-| 3 | [@depup/typescript__native-preview-linux-x64](https://www.npmjs.com/package/@depup/typescript__native-preview-linux-x64) | 419 | 419 | -- | 7.0.0-dev.20260326.1-depup.0 | unknown | behind |
-| 4 | [@depup/acme-client](https://www.npmjs.com/package/@depup/acme-client) | 215 | 245 | 245 | 5.4.0-depup.2 | 5.4.0 | current |
-| 5 | [@depup/rollup__rollup-linux-arm-musleabihf](https://www.npmjs.com/package/@depup/rollup__rollup-linux-arm-musleabihf) | 207 | 241 | 241 | 4.60.0-depup.0 | unknown | behind |
-| 6 | [@depup/rollup__rollup-win32-arm64-msvc](https://www.npmjs.com/package/@depup/rollup__rollup-win32-arm64-msvc) | 207 | 239 | 239 | 4.60.0-depup.0 | unknown | behind |
-| 7 | [@depup/react-navigation__native-stack](https://www.npmjs.com/package/@depup/react-navigation__native-stack) | 229 | 229 | 229 | 7.14.9-depup.0 | unknown | behind |
-| 8 | [@depup/dayjs](https://www.npmjs.com/package/@depup/dayjs) | 11 | 197 | 197 | 1.11.20-depup.0 | 1.11.20 | current |
-| 9 | [@depup/eslint-plugin-es-x](https://www.npmjs.com/package/@depup/eslint-plugin-es-x) | -- | 180 | -- | 9.6.0-depup.0 | 9.6.0 | current |
-| 10 | [@depup/fastify-helmet](https://www.npmjs.com/package/@depup/fastify-helmet) | -- | 180 | -- | 7.1.0-depup.0 | 7.1.0 | current |
-| 11 | [@depup/fastify-static](https://www.npmjs.com/package/@depup/fastify-static) | -- | 170 | -- | 4.7.0-depup.0 | 4.7.0 | current |
-| 12 | [@depup/pkgroll](https://www.npmjs.com/package/@depup/pkgroll) | 133 | 168 | 168 | 2.27.0-depup.1 | 2.27.0 | current |
-| 13 | [@depup/react-scripts](https://www.npmjs.com/package/@depup/react-scripts) | 129 | 159 | 159 | 5.0.1-depup.1 | 5.0.1 | current |
-| 14 | [@depup/firebase__auth-compat](https://www.npmjs.com/package/@depup/firebase__auth-compat) | -- | 157 | -- | 0.6.4-depup.0 | unknown | behind |
-| 15 | [@depup/firebase__analytics](https://www.npmjs.com/package/@depup/firebase__analytics) | -- | 155 | -- | 0.10.21-depup.0 | unknown | behind |
-| 16 | [@depup/firebase__app-check](https://www.npmjs.com/package/@depup/firebase__app-check) | -- | 155 | -- | 0.11.2-depup.0 | unknown | behind |
-| 17 | [@depup/firebase__firestore](https://www.npmjs.com/package/@depup/firebase__firestore) | -- | 155 | -- | 4.13.0-depup.0 | unknown | behind |
-| 18 | [@depup/firebase__functions](https://www.npmjs.com/package/@depup/firebase__functions) | -- | 154 | -- | 0.13.3-depup.0 | unknown | behind |
-| 19 | [@depup/firebase__messaging-compat](https://www.npmjs.com/package/@depup/firebase__messaging-compat) | -- | 154 | -- | 0.2.25-depup.0 | unknown | behind |
-| 20 | [@depup/firebase__util](https://www.npmjs.com/package/@depup/firebase__util) | -- | 154 | -- | 1.15.0-depup.0 | unknown | behind |
-| 21 | [@depup/firebase__data-connect](https://www.npmjs.com/package/@depup/firebase__data-connect) | -- | 152 | -- | 0.5.0-depup.0 | unknown | behind |
-| 22 | [@depup/firebase__performance-compat](https://www.npmjs.com/package/@depup/firebase__performance-compat) | -- | 152 | -- | 0.2.24-depup.0 | unknown | behind |
-| 23 | [@depup/firebase__remote-config-compat](https://www.npmjs.com/package/@depup/firebase__remote-config-compat) | -- | 152 | -- | 0.2.23-depup.0 | unknown | behind |
-| 24 | [@depup/express](https://www.npmjs.com/package/@depup/express) | -- | 141 | -- | 5.2.1-depup.7 | 5.2.1 | current |
-| 25 | [@depup/emotion__styled](https://www.npmjs.com/package/@depup/emotion__styled) | -- | 111 | -- | 11.14.1-depup.1 | unknown | behind |
+| 1 | [@depup/sanity](https://www.npmjs.com/package/@depup/sanity) | 1,007 | 1,293 | -- | 5.18.0-depup.3 | 5.18.0 | current |
+| 2 | [@depup/prisma](https://www.npmjs.com/package/@depup/prisma) | 252 | 1,110 | 1,518 | 7.5.0-depup.7 | 7.5.0 | current |
+| 3 | [@depup/posthog-js](https://www.npmjs.com/package/@depup/posthog-js) | -- | 874 | 874 | 1.364.0-depup.0 | 1.364.0 | current |
+| 4 | [@depup/mongoose](https://www.npmjs.com/package/@depup/mongoose) | -- | 754 | -- | 9.3.3-depup.0 | 9.3.3 | current |
+| 5 | [@depup/aws-sdk__signature-v4-multi-region](https://www.npmjs.com/package/@depup/aws-sdk__signature-v4-multi-region) | 458 | 610 | 610 | 3.996.14-depup.0 | unknown | behind |
+| 6 | [@depup/markdown-to-jsx](https://www.npmjs.com/package/@depup/markdown-to-jsx) | 224 | 451 | -- | 9.7.13-depup.0 | 9.7.13 | current |
+| 7 | [@depup/storybook__addon-links](https://www.npmjs.com/package/@depup/storybook__addon-links) | 232 | 361 | 361 | 10.3.3-depup.0 | 1.1.1 | behind |
+| 8 | [@depup/lucide](https://www.npmjs.com/package/@depup/lucide) | 325 | 355 | -- | 1.7.0-depup.0 | 1.7.0 | current |
+| 9 | [@depup/rate-limiter-flexible](https://www.npmjs.com/package/@depup/rate-limiter-flexible) | 10 | 326 | -- | 10.0.1-depup.0 | 10.0.1 | current |
+| 10 | [@depup/jotai](https://www.npmjs.com/package/@depup/jotai) | 108 | 302 | -- | 2.19.0-depup.0 | 2.19.0 | current |
+| 11 | [@depup/vitest__utils](https://www.npmjs.com/package/@depup/vitest__utils) | 217 | 261 | -- | 4.1.2-depup.0 | unknown | behind |
+| 12 | [@depup/acme-client](https://www.npmjs.com/package/@depup/acme-client) | 217 | 249 | 249 | 5.4.0-depup.2 | 5.4.0 | current |
+| 13 | [@depup/rollup__rollup-linux-x64-musl](https://www.npmjs.com/package/@depup/rollup__rollup-linux-x64-musl) | 199 | 242 | 242 | 4.60.0-depup.0 | unknown | behind |
+| 14 | [@depup/rolldown__binding-linux-x64-musl](https://www.npmjs.com/package/@depup/rolldown__binding-linux-x64-musl) | 239 | 239 | 239 | 1.0.0-rc.12-depup.0 | unknown | behind |
+| 15 | [@depup/clerk__nextjs](https://www.npmjs.com/package/@depup/clerk__nextjs) | 218 | 238 | -- | 7.0.7-depup.0 | unknown | behind |
+| 16 | [@depup/rollup__rollup-linux-arm-gnueabihf](https://www.npmjs.com/package/@depup/rollup__rollup-linux-arm-gnueabihf) | 196 | 235 | -- | 4.60.0-depup.0 | unknown | behind |
+| 17 | [@depup/opentelemetry__instrumentation-koa](https://www.npmjs.com/package/@depup/opentelemetry__instrumentation-koa) | 191 | 231 | 231 | 0.62.0-depup.0 | unknown | behind |
+| 18 | [@depup/yup](https://www.npmjs.com/package/@depup/yup) | -- | 208 | 208 | 1.7.1-depup.1 | 1.7.1 | current |
+| 19 | [@depup/yaml](https://www.npmjs.com/package/@depup/yaml) | -- | 205 | 205 | 2.8.3-depup.0 | 2.8.3 | current |
+| 20 | [@depup/vue__compiler-sfc](https://www.npmjs.com/package/@depup/vue__compiler-sfc) | 93 | 196 | 196 | 3.5.31-depup.0 | unknown | behind |
+| 21 | [@depup/boxen](https://www.npmjs.com/package/@depup/boxen) | 20 | 195 | 195 | 8.0.1-depup.1 | 8.0.1 | current |
+| 22 | [@depup/fast-check](https://www.npmjs.com/package/@depup/fast-check) | 151 | 189 | 189 | 4.6.0-depup.1 | 4.6.0 | current |
+| 23 | [@depup/fastify-helmet](https://www.npmjs.com/package/@depup/fastify-helmet) | 30 | 182 | 182 | 7.1.0-depup.0 | 7.1.0 | current |
+| 24 | [@depup/wait-on](https://www.npmjs.com/package/@depup/wait-on) | 119 | 177 | 177 | 9.0.4-depup.1 | 9.0.4 | current |
+| 25 | [@depup/hapi](https://www.npmjs.com/package/@depup/hapi) | 136 | 174 | 174 | 18.1.0-depup.1 | 18.1.0 | current |
 
 ## Chrome Web Store
 
