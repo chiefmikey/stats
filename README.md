@@ -8,9 +8,9 @@ Last updated: 2026-04-03
 
 | Package | Weekly | Monthly | Yearly | Total |
 |---------|-------:|--------:|-------:|------:|
-| [Mikey Pro](https://www.npmjs.com/package/mikey-pro) | 127 | 3,535 | 12,560 | 17,194 |
-| [ESLint Plugin Disable Autofix](https://www.npmjs.com/package/eslint-plugin-disable-autofix) | 134,170 | 470,715 | 2,745,614 | 3,498,458 |
-| [ESLint Config React App Bump](https://www.npmjs.com/package/eslint-config-react-app-bump) | 1,174 | 4,210 | 64,812 | 88,702 |
+| [Mikey Pro](https://www.npmjs.com/package/mikey-pro) | 115 | 3,314 | 12,555 | 17,212 |
+| [ESLint Plugin Disable Autofix](https://www.npmjs.com/package/eslint-plugin-disable-autofix) | 135,390 | 480,746 | 2,766,076 | 3,525,148 |
+| [ESLint Config React App Bump](https://www.npmjs.com/package/eslint-config-react-app-bump) | 1,100 | 4,168 | 64,683 | 88,833 |
 
 ## @depup Packages
 
@@ -19,41 +19,41 @@ Automated dependency updates -- republishes popular npm packages with updated de
 | Metric | Value |
 |--------|------:|
 | Total packages | 2,034 |
-| Weekly downloads | 6,042 |
-| Monthly downloads | 24,743 |
-| Yearly downloads | 9,768 |
-| Current with upstream | 1374 |
-| Behind upstream | 660 |
+| Weekly downloads | 5,543 |
+| Monthly downloads | 26,680 |
+| Yearly downloads | 16,529 |
+| Current with upstream | 1370 |
+| Behind upstream | 664 |
 
 ### Top 25 by Monthly Downloads
 
 | # | Package | Weekly | Monthly | Yearly | @depup | Upstream | Status |
 |---|---------|-------:|--------:|-------:|--------|----------|--------|
-| 1 | [@depup/multer-s3](https://www.npmjs.com/package/@depup/multer-s3) | -- | 1,248 | -- | 3.0.1-depup.12 | 3.0.1 | current |
-| 2 | [@depup/aws-sdk__credential-provider-cognito-identity](https://www.npmjs.com/package/@depup/aws-sdk__credential-provider-cognito-identity) | 437 | 910 | 910 | 3.972.21-depup.0 | unknown | behind |
-| 3 | [@depup/nx](https://www.npmjs.com/package/@depup/nx) | -- | 731 | -- | 22.6.4-depup.1 | 22.6.4 | current |
-| 4 | [@depup/turbo__workspaces](https://www.npmjs.com/package/@depup/turbo__workspaces) | 545 | 701 | 701 | 2.9.3-depup.0 | unknown | behind |
-| 5 | [@depup/webpack-cli](https://www.npmjs.com/package/@depup/webpack-cli) | -- | 530 | -- | 7.0.2-depup.0 | 7.0.2 | current |
-| 6 | [@depup/msw](https://www.npmjs.com/package/@depup/msw) | -- | 471 | -- | 2.12.14-depup.2 | 2.12.14 | current |
-| 7 | [@depup/submit](https://www.npmjs.com/package/@depup/submit) | 22 | 468 | 468 | 1.1.0 | 2.0.0 | behind |
-| 8 | [@depup/newrelic](https://www.npmjs.com/package/@depup/newrelic) | -- | 462 | -- | 13.18.0-depup.1 | 13.18.0 | current |
-| 9 | [@depup/expo__schema-utils](https://www.npmjs.com/package/@depup/expo__schema-utils) | -- | 422 | 422 | 55.0.3-canary-20260328-bdc6273-depup.0 | unknown | behind |
-| 10 | [@depup/acme-client](https://www.npmjs.com/package/@depup/acme-client) | 146 | 391 | 391 | 5.4.0-depup.3 | 5.4.0 | current |
-| 11 | [@depup/next__bundle-analyzer](https://www.npmjs.com/package/@depup/next__bundle-analyzer) | -- | 386 | -- | 16.2.2-depup.0 | unknown | behind |
-| 12 | [@depup/module-federation__webpack-bundler-runtime](https://www.npmjs.com/package/@depup/module-federation__webpack-bundler-runtime) | -- | 364 | -- | 2.3.1-depup.0 | unknown | behind |
-| 13 | [@depup/vitest__browser](https://www.npmjs.com/package/@depup/vitest__browser) | -- | 364 | -- | 4.1.2-depup.0 | unknown | behind |
-| 14 | [@depup/axios](https://www.npmjs.com/package/@depup/axios) | 256 | 357 | 357 | 1.14.1-depup.0 | 1.14.0 | behind |
-| 15 | [@depup/rollup__rollup-linux-riscv64-musl](https://www.npmjs.com/package/@depup/rollup__rollup-linux-riscv64-musl) | 119 | 355 | -- | 4.60.1-depup.0 | unknown | behind |
-| 16 | [@depup/next__swc-linux-x64-gnu](https://www.npmjs.com/package/@depup/next__swc-linux-x64-gnu) | -- | 337 | -- | 16.2.2-depup.0 | unknown | behind |
-| 17 | [@depup/jest-circus](https://www.npmjs.com/package/@depup/jest-circus) | 128 | 316 | -- | 30.3.0-depup.2 | 30.3.0 | current |
-| 18 | [@depup/jotai](https://www.npmjs.com/package/@depup/jotai) | 10 | 310 | -- | 2.19.0-depup.0 | 2.19.0 | current |
-| 19 | [@depup/angular__material](https://www.npmjs.com/package/@depup/angular__material) | 26 | 304 | 304 | 21.2.5-depup.0 | unknown | behind |
-| 20 | [@depup/open-cli](https://www.npmjs.com/package/@depup/open-cli) | -- | 294 | -- | 9.0.0-depup.1 | 9.0.0 | current |
-| 21 | [@depup/typescript-eslint__visitor-keys](https://www.npmjs.com/package/@depup/typescript-eslint__visitor-keys) | 124 | 293 | 293 | 8.58.0-depup.0 | unknown | behind |
-| 22 | [@depup/nise](https://www.npmjs.com/package/@depup/nise) | -- | 285 | -- | 6.1.4-depup.3 | 6.1.4 | current |
-| 23 | [@depup/imagemin](https://www.npmjs.com/package/@depup/imagemin) | 231 | 283 | -- | 9.0.1-depup.2 | 9.0.1 | current |
-| 24 | [@depup/vitest__spy](https://www.npmjs.com/package/@depup/vitest__spy) | -- | 279 | -- | 4.1.2-depup.0 | unknown | behind |
-| 25 | [@depup/rollup](https://www.npmjs.com/package/@depup/rollup) | 127 | 278 | 278 | 4.60.1-depup.0 | 4.60.1 | current |
+| 1 | [@depup/multer-s3](https://www.npmjs.com/package/@depup/multer-s3) | -- | 1,354 | 1,354 | 3.0.1-depup.12 | 3.0.1 | current |
+| 2 | [@depup/lerna](https://www.npmjs.com/package/@depup/lerna) | -- | 693 | 693 | 9.0.7-depup.3 | 9.0.7 | current |
+| 3 | [@depup/aws-sdk__core](https://www.npmjs.com/package/@depup/aws-sdk__core) | 140 | 679 | -- | 3.973.26-depup.0 | unknown | behind |
+| 4 | [@depup/rolldown](https://www.npmjs.com/package/@depup/rolldown) | -- | 667 | -- | 1.0.0-rc.13-depup.0 | 1.0.0-rc.13 | current |
+| 5 | [@depup/eslint-plugin-storybook](https://www.npmjs.com/package/@depup/eslint-plugin-storybook) | -- | 665 | -- | 10.3.4-depup.0 | 10.3.4 | current |
+| 6 | [@depup/aws-sdk__credential-provider-process](https://www.npmjs.com/package/@depup/aws-sdk__credential-provider-process) | 129 | 646 | 646 | 3.972.24-depup.0 | unknown | behind |
+| 7 | [@depup/vitest](https://www.npmjs.com/package/@depup/vitest) | 22 | 602 | 602 | 4.1.2-depup.0 | 4.1.2 | current |
+| 8 | [@depup/microsoft__api-extractor](https://www.npmjs.com/package/@depup/microsoft__api-extractor) | -- | 601 | 601 | 7.58.0-depup.1 | unknown | behind |
+| 9 | [@depup/trpc__next](https://www.npmjs.com/package/@depup/trpc__next) | 245 | 583 | -- | 11.16.0-depup.0 | unknown | behind |
+| 10 | [@depup/jsdom](https://www.npmjs.com/package/@depup/jsdom) | -- | 572 | 572 | 29.0.1-depup.2 | 29.0.1 | current |
+| 11 | [@depup/kysely](https://www.npmjs.com/package/@depup/kysely) | -- | 514 | -- | 0.28.15-depup.0 | 0.28.15 | current |
+| 12 | [@depup/newrelic](https://www.npmjs.com/package/@depup/newrelic) | 212 | 468 | 468 | 13.18.0-depup.1 | 13.18.0 | current |
+| 13 | [@depup/playwright-test](https://www.npmjs.com/package/@depup/playwright-test) | 342 | 393 | -- | 14.1.13-depup.4 | 14.1.13 | current |
+| 14 | [@depup/acme-client](https://www.npmjs.com/package/@depup/acme-client) | 142 | 391 | 391 | 5.4.0-depup.3 | 5.4.0 | current |
+| 15 | [@depup/rollup__rollup-linux-x64-gnu](https://www.npmjs.com/package/@depup/rollup__rollup-linux-x64-gnu) | 130 | 391 | -- | 4.60.1-depup.0 | unknown | behind |
+| 16 | [@depup/magicbell__magicbell-react](https://www.npmjs.com/package/@depup/magicbell__magicbell-react) | -- | 385 | -- | 11.5.1-depup.2 | unknown | behind |
+| 17 | [@depup/resend](https://www.npmjs.com/package/@depup/resend) | 224 | 385 | -- | 6.10.0-depup.1 | 6.10.0 | current |
+| 18 | [@depup/prisma__dev](https://www.npmjs.com/package/@depup/prisma__dev) | -- | 376 | 376 | 0.24.3-depup.1 | unknown | behind |
+| 19 | [@depup/quasar](https://www.npmjs.com/package/@depup/quasar) | 35 | 370 | 370 | 2.19.2-depup.0 | 2.19.2 | current |
+| 20 | [@depup/module-federation__webpack-bundler-runtime](https://www.npmjs.com/package/@depup/module-federation__webpack-bundler-runtime) | 122 | 365 | -- | 2.3.1-depup.0 | unknown | behind |
+| 21 | [@depup/rollup__rollup-android-arm64](https://www.npmjs.com/package/@depup/rollup__rollup-android-arm64) | 116 | 352 | -- | 4.60.1-depup.0 | unknown | behind |
+| 22 | [@depup/esbuild__linux-ppc64](https://www.npmjs.com/package/@depup/esbuild__linux-ppc64) | 288 | 344 | 344 | 0.28.0-depup.0 | unknown | behind |
+| 23 | [@depup/inquirer](https://www.npmjs.com/package/@depup/inquirer) | -- | 331 | -- | 13.3.2-depup.0 | 13.3.2 | current |
+| 24 | [@depup/typescript-eslint__scope-manager](https://www.npmjs.com/package/@depup/typescript-eslint__scope-manager) | 119 | 295 | 295 | 8.58.0-depup.0 | unknown | behind |
+| 25 | [@depup/imagemin](https://www.npmjs.com/package/@depup/imagemin) | -- | 283 | 283 | 9.0.1-depup.2 | 9.0.1 | current |
 
 ## Chrome Web Store
 
