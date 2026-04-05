@@ -19,41 +19,41 @@ Automated dependency updates -- republishes popular npm packages with updated de
 | Metric | Value |
 |--------|------:|
 | Total packages | 2,037 |
-| Weekly downloads | 8,755 |
-| Monthly downloads | 27,776 |
-| Yearly downloads | 28,917 |
-| Current with upstream | 1376 |
-| Behind upstream | 661 |
+| Weekly downloads | 19,196 |
+| Monthly downloads | 46,826 |
+| Yearly downloads | 40,061 |
+| Current with upstream | 1377 |
+| Behind upstream | 660 |
 
 ### Top 25 by Monthly Downloads
 
 | # | Package | Weekly | Monthly | Yearly | @depup | Upstream | Status |
 |---|---------|-------:|--------:|-------:|--------|----------|--------|
-| 1 | [@depup/aws-sdk__client-sqs](https://www.npmjs.com/package/@depup/aws-sdk__client-sqs) | 545 | 2,152 | 2,152 | 3.1024.0-depup.0 | unknown | behind |
-| 2 | [@depup/i18next](https://www.npmjs.com/package/@depup/i18next) | 294 | 1,481 | 1,481 | 26.0.3-depup.0 | 26.0.3 | current |
-| 3 | [@depup/typescript__native-preview](https://www.npmjs.com/package/@depup/typescript__native-preview) | 656 | 1,323 | 1,323 | 7.0.0-dev.20260404.1-depup.0 | unknown | behind |
-| 4 | [@depup/angular__build](https://www.npmjs.com/package/@depup/angular__build) | 434 | 888 | 888 | 21.2.6-depup.2 | unknown | behind |
-| 5 | [@depup/nx](https://www.npmjs.com/package/@depup/nx) | 230 | 846 | 846 | 22.6.4-depup.1 | 22.6.4 | current |
-| 6 | [@depup/tiptap__core](https://www.npmjs.com/package/@depup/tiptap__core) | 370 | 747 | 747 | 3.22.2-depup.0 | unknown | behind |
-| 7 | [@depup/magicbell__magicbell-react](https://www.npmjs.com/package/@depup/magicbell__magicbell-react) | 338 | 495 | 495 | 11.5.1-depup.3 | unknown | behind |
-| 8 | [@depup/esbuild__android-arm64](https://www.npmjs.com/package/@depup/esbuild__android-arm64) | 430 | 484 | 484 | 0.28.0-depup.0 | unknown | behind |
-| 9 | [@depup/keystone](https://www.npmjs.com/package/@depup/keystone) | 434 | 481 | 481 | 4.2.1-depup.4 | 4.2.1 | current |
-| 10 | [@depup/z-schema](https://www.npmjs.com/package/@depup/z-schema) | 119 | 476 | 476 | 12.1.1-depup.0 | 12.1.1 | current |
-| 11 | [@depup/esbuild__win32-ia32](https://www.npmjs.com/package/@depup/esbuild__win32-ia32) | 407 | 459 | 459 | 0.28.0-depup.0 | unknown | behind |
-| 12 | [@depup/esbuild__linux-ppc64](https://www.npmjs.com/package/@depup/esbuild__linux-ppc64) | 397 | 454 | 454 | 0.28.0-depup.0 | unknown | behind |
-| 13 | [@depup/expo__schema-utils](https://www.npmjs.com/package/@depup/expo__schema-utils) | 59 | 430 | 430 | 55.0.3-canary-20260328-bdc6273-depup.0 | unknown | behind |
-| 14 | [@depup/redocly__config](https://www.npmjs.com/package/@depup/redocly__config) | 143 | 428 | 428 | 0.46.0-depup.0 | unknown | behind |
-| 15 | [@depup/typescript-eslint__eslint-plugin](https://www.npmjs.com/package/@depup/typescript-eslint__eslint-plugin) | 124 | 404 | 404 | 8.58.0-depup.0 | unknown | behind |
-| 16 | [@depup/acme-client](https://www.npmjs.com/package/@depup/acme-client) | 20 | 397 | 397 | 5.4.0-depup.3 | 5.4.0 | current |
-| 17 | [@depup/express-openid-connect](https://www.npmjs.com/package/@depup/express-openid-connect) | 16 | 370 | 370 | 2.20.1-depup.0 | 2.20.1 | current |
-| 18 | [@depup/rollup__rollup-linux-x64-musl](https://www.npmjs.com/package/@depup/rollup__rollup-linux-x64-musl) | 121 | 363 | 363 | 4.60.1-depup.0 | unknown | behind |
-| 19 | [@depup/rollup__rollup-darwin-arm64](https://www.npmjs.com/package/@depup/rollup__rollup-darwin-arm64) | 119 | 359 | 359 | 4.60.1-depup.0 | unknown | behind |
-| 20 | [@depup/tsup](https://www.npmjs.com/package/@depup/tsup) | 127 | 345 | 345 | 8.5.1-depup.2 | 8.5.1 | current |
-| 21 | [@depup/path-to-regexp](https://www.npmjs.com/package/@depup/path-to-regexp) | 273 | 319 | 319 | 8.4.2-depup.0 | 8.4.2 | current |
-| 22 | [@depup/react-router-dom](https://www.npmjs.com/package/@depup/react-router-dom) | 116 | 318 | 318 | 7.14.0-depup.0 | 7.14.0 | current |
-| 23 | [@depup/playwright-core](https://www.npmjs.com/package/@depup/playwright-core) | 248 | 304 | 304 | 1.59.1-depup.0 | 1.59.1 | current |
-| 24 | [@depup/nestjs__core](https://www.npmjs.com/package/@depup/nestjs__core) | 116 | 301 | 301 | 11.1.18-depup.0 | unknown | behind |
-| 25 | [@depup/algolia__requester-node-http](https://www.npmjs.com/package/@depup/algolia__requester-node-http) | 136 | 300 | 300 | 5.50.1-depup.0 | unknown | behind |
+| 1 | [@depup/netlify-cli](https://www.npmjs.com/package/@depup/netlify-cli) | -- | 1,945 | -- | 24.9.0-depup.4 | 24.9.0 | current |
+| 2 | [@depup/posthog-js](https://www.npmjs.com/package/@depup/posthog-js) | -- | 1,740 | -- | 1.364.7-depup.0 | 1.364.7 | current |
+| 3 | [@depup/ai](https://www.npmjs.com/package/@depup/ai) | 605 | 1,399 | 1,399 | 6.0.146-depup.0 | 6.0.146 | current |
+| 4 | [@depup/react-i18next](https://www.npmjs.com/package/@depup/react-i18next) | 216 | 1,183 | 1,183 | 17.0.2-depup.0 | 17.0.2 | current |
+| 5 | [@depup/typebox](https://www.npmjs.com/package/@depup/typebox) | -- | 956 | -- | 1.1.15-depup.0 | 1.1.15 | current |
+| 6 | [@depup/aws-sdk__credential-provider-login](https://www.npmjs.com/package/@depup/aws-sdk__credential-provider-login) | -- | 899 | -- | 3.972.28-depup.0 | unknown | behind |
+| 7 | [@depup/storybook](https://www.npmjs.com/package/@depup/storybook) | 239 | 839 | 839 | 10.3.4-depup.1 | 10.3.4 | current |
+| 8 | [@depup/ai-sdk__google](https://www.npmjs.com/package/@depup/ai-sdk__google) | 553 | 813 | 813 | 3.0.58-depup.0 | unknown | behind |
+| 9 | [@depup/payload](https://www.npmjs.com/package/@depup/payload) | -- | 789 | -- | 3.81.0-depup.1 | 3.81.0 | current |
+| 10 | [@depup/tanstack__query-devtools](https://www.npmjs.com/package/@depup/tanstack__query-devtools) | -- | 748 | -- | 5.96.2-depup.0 | unknown | behind |
+| 11 | [@depup/tiptap__extension-image](https://www.npmjs.com/package/@depup/tiptap__extension-image) | 349 | 728 | 728 | 3.22.2-depup.0 | unknown | behind |
+| 12 | [@depup/lerna](https://www.npmjs.com/package/@depup/lerna) | -- | 697 | -- | 9.0.7-depup.3 | 9.0.7 | current |
+| 13 | [@depup/tanstack__react-query-devtools](https://www.npmjs.com/package/@depup/tanstack__react-query-devtools) | 315 | 688 | 688 | 5.96.2-depup.0 | unknown | behind |
+| 14 | [@depup/contentful](https://www.npmjs.com/package/@depup/contentful) | 25 | 611 | 611 | 11.12.0-depup.1 | 11.12.0 | current |
+| 15 | [@depup/react-navigation__native-stack](https://www.npmjs.com/package/@depup/react-navigation__native-stack) | 109 | 591 | 591 | 7.14.10-depup.0 | unknown | behind |
+| 16 | [@depup/storybook__builder-vite](https://www.npmjs.com/package/@depup/storybook__builder-vite) | 121 | 570 | -- | 10.3.4-depup.0 | unknown | behind |
+| 17 | [@depup/africastalking](https://www.npmjs.com/package/@depup/africastalking) | 259 | 543 | 543 | 0.7.9-depup.4 | 0.7.9 | current |
+| 18 | [@depup/react-scripts](https://www.npmjs.com/package/@depup/react-scripts) | -- | 527 | -- | 5.0.1-depup.4 | 5.0.1 | current |
+| 19 | [@depup/sass](https://www.npmjs.com/package/@depup/sass) | 127 | 525 | -- | 1.99.0-depup.0 | 1.99.0 | current |
+| 20 | [@depup/ai-sdk__openai](https://www.npmjs.com/package/@depup/ai-sdk__openai) | 241 | 505 | 505 | 3.0.50-depup.0 | unknown | behind |
+| 21 | [@depup/ai-sdk__anthropic](https://www.npmjs.com/package/@depup/ai-sdk__anthropic) | 229 | 487 | 487 | 3.0.66-depup.0 | unknown | behind |
+| 22 | [@depup/submit](https://www.npmjs.com/package/@depup/submit) | 11 | 472 | 472 | 1.1.0 | 2.0.0 | behind |
+| 23 | [@depup/webpack-dev-middleware](https://www.npmjs.com/package/@depup/webpack-dev-middleware) | 15 | 448 | -- | 8.0.2-depup.0 | 8.0.2 | current |
+| 24 | [@depup/typescript-eslint__eslint-plugin](https://www.npmjs.com/package/@depup/typescript-eslint__eslint-plugin) | -- | 404 | -- | 8.58.0-depup.0 | unknown | behind |
+| 25 | [@depup/angular__compiler-cli](https://www.npmjs.com/package/@depup/angular__compiler-cli) | 124 | 399 | 399 | 21.2.7-depup.0 | unknown | behind |
 
 ## Chrome Web Store
 
